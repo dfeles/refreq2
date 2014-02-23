@@ -4,3 +4,5 @@ bin/refreq2Debug.app/*
 requirements/*
 
 bin/data/.gitkeep
+
+refreq2.xcodeproj/project.xcworkspace/xcuserdata/danielfeles.xcuserdatad/UserInterfaceState.xcuserstate
