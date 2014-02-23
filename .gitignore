@@ -1,0 +1,6 @@
+
+bin/refreq2.app/*
+bin/refreq2Debug.app/*
+requirements/*
+
+bin/data/.gitkeep
