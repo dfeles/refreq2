@@ -24,8 +24,10 @@ class PixelPickup {
         void getPixels();
         float readPixels [(int)PIXELS_READING][2];
         void setupHertz (float min, float max);
-    private:
+        int getHertzMin ();
+        int getHertzMax ();
         int getFreq(int y);
+    private:
         float averageB = 0;
         float hertzScale[(int)PIXELS_READING];
     

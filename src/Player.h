@@ -13,9 +13,11 @@
 #include "refreqConstans.h"
 #include "Vinyl.h"
 #include "PixelPickup.h"
+#include "Synthetizer.h"
 
 extern Vinyl* vinyl;
 extern PixelPickup* pixelPickup;
+extern Synthetizer* synthetizer;
 
 class Player {
 public:

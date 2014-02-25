@@ -13,10 +13,10 @@ PixelPickup::PixelPickup(){
     //remember: x can only be between 0 - vinylWidth
     //remember: y can only be between 0 - PIXELS_READING-1
     
-    setupHertz(0, 3500);
+    setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ);
     
     pickupPoint1.x = 200;
-    pickupPoint1.y = 0;
+    pickupPoint1.y = 1;
     
     pickupPoint2.x = 200;
     pickupPoint2.y = PIXELS_READING-1;
@@ -24,7 +24,6 @@ PixelPickup::PixelPickup(){
     for(int i=0; i<PIXELS_READING; i++){
          readPixels[i][0] = 0;
     }
-
 }
 
 void PixelPickup::getPixels() {
@@ -47,9 +46,8 @@ void PixelPickup::getPixels() {
 }
 
 void PixelPickup::setupHertz (float min, float max) {
-    for(int n = 0;n<PIXELS_READING;n++){
+    for(int n = 1;n<PIXELS_READING+1;n++){
         hertzScale[n] = (max-min) / PIXELS_READING * n;
-        cout << hertzScale[(int)PIXELS_READING-n-1];
     }
     
 }

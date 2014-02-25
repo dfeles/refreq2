@@ -12,22 +12,19 @@
 #include <iostream>
 #include "ofMain.h"
 #include "ofGraphics.h"
-#include "Loader.h"
 #include "Player.h"
 #include "Synthetizer.h"
 
-extern Loader* loader;
 extern Player* player;
 extern Synthetizer* synthetizer;
 
 class Gui {
     public:
         void drawGui();
-        void handleKeyPressed(int key);
-        void handleDraggedFile(ofDragInfo info);
+        void drawMessage (string message);
+        string getFilePath();
     
     private:
-        string getFilePath();
     
 };
 

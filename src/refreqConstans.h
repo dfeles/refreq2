@@ -12,6 +12,9 @@
 #define SAMPLE_RATE 44100
 #define INITIAL_BUFFER_SIZE 512
 
+#define DEFAULT_MIN_HZ 1
+#define DEFAULT_MAX_HZ 8000
+
 #define HEADER_HEIGHT 80
 #define FOOTER_HEIGHT 70
 
@@ -21,7 +24,7 @@
 #define PLAYER_PLAYING 1
 
 #define PIXELS_READING 1024.0
-#define PIXELS_PER_FRAME 1.3
+#define PIXELS_PER_FRAME 1
 #define FRAME_PER_SECOND 30
 
 #define MAIN_IMAGE "../Resources/main.jpg"

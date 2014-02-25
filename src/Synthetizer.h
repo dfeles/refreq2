@@ -20,6 +20,7 @@ public:
     Synthetizer();
     void calculateWave(float * output);
     float soundWave[INITIAL_BUFFER_SIZE];
+    void reset();
 private:
 	float amp[(int)PIXELS_READING];
 	float phases[(int)PIXELS_READING];

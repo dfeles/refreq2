@@ -7,9 +7,10 @@
 #include "Player.h"
 #include "PixelPickup.h"
 #include "Synthetizer.h"
+#include "ofxFft.h"
 
 
-class Refreq2 : public ofBaseApp, public Gui{
+class Refreq2 : public ofBaseApp{
 
 public:
 	void setup();
@@ -25,6 +26,8 @@ public:
 	void windowResized(int w, int h);
 	void dragEvent(ofDragInfo dragInfo);
 	void gotMessage(ofMessage msg);
+    threadedMusicLoader musicLoader;
+    void exit();
     
 private:
 	void audioRequested 	(float * input, int bufferSize, int nChannels); /* output method */

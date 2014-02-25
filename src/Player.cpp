@@ -38,6 +38,7 @@ void Player::setStatus (int _status) {
     
     if(status == PLAYER_PAUSED){
         ofSoundStreamStop();
+        synthetizer->reset();
     } else {
         ofSoundStreamStart();
     }

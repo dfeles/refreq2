@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7CA807218B98E88005858C5 /* audiodecoderbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA806918B98E6B005858C5 /* audiodecoderbase.cpp */; };
+		C7CA807318B98E88005858C5 /* audiodecodercoreaudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA806A18B98E6B005858C5 /* audiodecodercoreaudio.cpp */; };
+		C7CA812618BA02BB005858C5 /* kiss_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = C7CA810618B9FC77005858C5 /* kiss_fft.c */; };
+		C7CA812718BA02BB005858C5 /* kiss_fftr.c in Sources */ = {isa = PBXBuildFile; fileRef = C7CA810818B9FC77005858C5 /* kiss_fftr.c */; };
+		C7CA812C18BA02DB005858C5 /* ofxFft.cpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = C7CA810F18B9FC77005858C5 /* ofxFft.cpp */; };
+		C7CA812D18BA02DB005858C5 /* ofxFftBasic.cpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = C7CA811118B9FC77005858C5 /* ofxFftBasic.cpp */; };
+		C7CA812E18BA02DB005858C5 /* ofxFftw.cpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = C7CA811318B9FC77005858C5 /* ofxFftw.cpp */; };
+		C7CA812F18BA02EB005858C5 /* ofxFft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA810F18B9FC77005858C5 /* ofxFft.cpp */; };
+		C7CA813018BA02EB005858C5 /* ofxFftBasic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA811118B9FC77005858C5 /* ofxFftBasic.cpp */; };
+		C7CA813118BA02EB005858C5 /* ofxFftw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA811318B9FC77005858C5 /* ofxFftw.cpp */; };
 		C7EDE54118A9070000E3C5C1 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EDE54018A9070000E3C5C1 /* GLUT.framework */; };
 		C7EDE54418A920B600E3C5C1 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EDE54318A920B500E3C5C1 /* openFrameworksDebug.a */; };
 		C7F3217518A2C7EC008C9295 /* Loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3217318A2C7EC008C9295 /* Loader.cpp */; };
@@ -16,6 +26,7 @@
 		C7F3218118A2C990008C9295 /* Synthetizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3217F18A2C990008C9295 /* Synthetizer.cpp */; };
 		C7F3218418A2CA61008C9295 /* Gui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3218218A2CA61008C9295 /* Gui.cpp */; };
 		C7F960D418B57C750057243B /* main.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = C7AD8BCD18B57AFA0001746B /* main.jpg */; };
+		C7FB60C918BB8CBB00312CAA /* fftw3f.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FB60C818BB8CBB00312CAA /* fftw3f.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
 		E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */; };
@@ -36,47 +47,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C7AF3CE318BCB4B900BAC632 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7AF3CD018BCB4B800BAC632 /* BasicExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B69B5B0A3A1756003C02F2;
+			remoteInfo = BasicExample;
+		};
 		C7EDE53C18A906A600E3C5C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C7EDE53818A906A600E3C5C1 /* openFrameworksLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
 			remoteInfo = openFrameworks;
-		};
-		C7F98C4118B584C80057243B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7F9724318B584AD0057243B /* example-busses.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4B69B5B0A3A1756003C02F2;
-			remoteInfo = "example-busses";
-		};
-		C7F98C4418B584C80057243B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7F9722018B584AC0057243B /* example-hello.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4B69B5B0A3A1756003C02F2;
-			remoteInfo = "example-hello";
-		};
-		C7F98C4718B584C80057243B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7F9723118B584AC0057243B /* example-oscilloscope.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4B69B5B0A3A1756003C02F2;
-			remoteInfo = "example-oscilloscope";
-		};
-		C7F98C4A18B584C80057243B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7F9725318B584AD0057243B /* example-parameters.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4B69B5B0A3A1756003C02F2;
-			remoteInfo = "example-parameters";
-		};
-		C7F98C4D18B584C80057243B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C7F9726218B584AE0057243B /* example-rendering.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E4B69B5B0A3A1756003C02F2;
-			remoteInfo = "example-rendering";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -87,6 +70,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				C7CA812C18BA02DB005858C5 /* ofxFft.cpp in CopyFiles */,
+				C7CA812D18BA02DB005858C5 /* ofxFftBasic.cpp in CopyFiles */,
+				C7CA812E18BA02DB005858C5 /* ofxFftw.cpp in CopyFiles */,
 				C7F960D418B57C750057243B /* main.jpg in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,10 +89,47 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C74806EE18BBA88500745DA4 /* threadedMusicLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = threadedMusicLoader.h; sourceTree = "<group>"; };
 		C7AD8BC918B57ADC0001746B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C7AD8BCA18B57ADC0001746B /* refreq2.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = refreq2.app; sourceTree = "<group>"; };
 		C7AD8BCB18B57ADC0001746B /* refreq2Debug.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = refreq2Debug.app; sourceTree = "<group>"; };
 		C7AD8BCD18B57AFA0001746B /* main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = main.jpg; sourceTree = "<group>"; };
+		C7AF3CD018BCB4B800BAC632 /* BasicExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BasicExample.xcodeproj; sourceTree = "<group>"; };
+		C7AF3CD518BCB4B800BAC632 /* BasicExampleDebug.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = BasicExampleDebug.app; sourceTree = "<group>"; };
+		C7AF3CD718BCB4B800BAC632 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C7AF3CD918BCB4B800BAC632 /* fftw3f.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = fftw3f.a; sourceTree = "<group>"; };
+		C7AF3CDB18BCB4B800BAC632 /* libfftw3f-3.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = "libfftw3f-3.dll"; sourceTree = "<group>"; };
+		C7AF3CDC18BCB4B800BAC632 /* openFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		C7AF3CDD18BCB4B800BAC632 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		C7AF3CDF18BCB4B800BAC632 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C7AF3CE018BCB4B800BAC632 /* testApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
+		C7AF3CE118BCB4B800BAC632 /* testApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
+		C7CA806318B98E6B005858C5 /* CADebugMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		C7CA806418B98E6B005858C5 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		C7CA806518B98E6B005858C5 /* audiodecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecoder.h; sourceTree = "<group>"; };
+		C7CA806618B98E6B005858C5 /* audiodecoderbase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecoderbase.h; sourceTree = "<group>"; };
+		C7CA806718B98E6B005858C5 /* audiodecodercoreaudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecodercoreaudio.h; sourceTree = "<group>"; };
+		C7CA806918B98E6B005858C5 /* audiodecoderbase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = audiodecoderbase.cpp; sourceTree = "<group>"; };
+		C7CA806A18B98E6B005858C5 /* audiodecodercoreaudio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = audiodecodercoreaudio.cpp; sourceTree = "<group>"; };
+		C7CA806E18B98E6B005858C5 /* ofxAudioDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAudioDecoder.h; sourceTree = "<group>"; };
+		C7CA80D718B9FC77005858C5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C7CA810118B9FC77005858C5 /* fftw3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fftw3.h; sourceTree = "<group>"; };
+		C7CA810318B9FC77005858C5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		C7CA810518B9FC77005858C5 /* _kiss_fft_guts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _kiss_fft_guts.h; sourceTree = "<group>"; };
+		C7CA810618B9FC77005858C5 /* kiss_fft.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kiss_fft.c; sourceTree = "<group>"; };
+		C7CA810718B9FC77005858C5 /* kiss_fft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kiss_fft.h; sourceTree = "<group>"; };
+		C7CA810818B9FC77005858C5 /* kiss_fftr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kiss_fftr.c; sourceTree = "<group>"; };
+		C7CA810918B9FC77005858C5 /* kiss_fftr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kiss_fftr.h; sourceTree = "<group>"; };
+		C7CA810A18B9FC77005858C5 /* ofxaddons_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ofxaddons_thumbnail.png; sourceTree = "<group>"; };
+		C7CA810B18B9FC77005858C5 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		C7CA810D18B9FC77005858C5 /* ofxEasyFft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxEasyFft.cpp; sourceTree = "<group>"; };
+		C7CA810E18B9FC77005858C5 /* ofxEasyFft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxEasyFft.h; sourceTree = "<group>"; };
+		C7CA810F18B9FC77005858C5 /* ofxFft.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFft.cpp; sourceTree = "<group>"; };
+		C7CA811018B9FC77005858C5 /* ofxFft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFft.h; sourceTree = "<group>"; };
+		C7CA811118B9FC77005858C5 /* ofxFftBasic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFftBasic.cpp; sourceTree = "<group>"; };
+		C7CA811218B9FC77005858C5 /* ofxFftBasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFftBasic.h; sourceTree = "<group>"; };
+		C7CA811318B9FC77005858C5 /* ofxFftw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFftw.cpp; sourceTree = "<group>"; };
+		C7CA811418B9FC77005858C5 /* ofxFftw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFftw.h; sourceTree = "<group>"; };
 		C7EDE53718A906A600E3C5C1 /* CoreOF.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = requirements/openFrameworks/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = "<group>"; };
 		C7EDE53818A906A600E3C5C1 /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = requirements/openFrameworks/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = "<group>"; };
 		C7EDE54018A9070000E3C5C1 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = requirements/openFrameworks/libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -124,57 +147,6 @@
 		C7F3218018A2C990008C9295 /* Synthetizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Synthetizer.h; sourceTree = "<group>"; };
 		C7F3218218A2CA61008C9295 /* Gui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gui.cpp; sourceTree = "<group>"; };
 		C7F3218318A2CA61008C9295 /* Gui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gui.h; sourceTree = "<group>"; };
-		C7F9721918B584AC0057243B /* addon_config.mk */ = {isa = PBXFileReference; lastKnownFileType = text; path = addon_config.mk; sourceTree = "<group>"; };
-		C7F9721A18B584AC0057243B /* changelog.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = changelog.md; sourceTree = "<group>"; };
-		C7F9721C18B584AC0057243B /* addons.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = addons.make; sourceTree = "<group>"; };
-		C7F9721F18B584AC0057243B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		C7F9722018B584AC0057243B /* example-hello.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "example-hello.xcodeproj"; sourceTree = "<group>"; };
-		C7F9722418B584AC0057243B /* openFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		C7F9722518B584AC0057243B /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		C7F9722718B584AC0057243B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		C7F9722818B584AC0057243B /* testApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
-		C7F9722918B584AC0057243B /* testApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
-		C7F9722B18B584AC0057243B /* addons.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = addons.make; sourceTree = "<group>"; };
-		C7F9722E18B584AC0057243B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		C7F9722F18B584AC0057243B /* entertainer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = entertainer.mp3; sourceTree = "<group>"; };
-		C7F9723018B584AC0057243B /* example-oscilloscopeDebug.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = "example-oscilloscopeDebug.app"; sourceTree = "<group>"; };
-		C7F9723118B584AC0057243B /* example-oscilloscope.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "example-oscilloscope.xcodeproj"; sourceTree = "<group>"; };
-		C7F9723518B584AD0057243B /* openFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		C7F9723618B584AD0057243B /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		C7F9723818B584AD0057243B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		C7F9723918B584AD0057243B /* testApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
-		C7F9723A18B584AD0057243B /* testApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
-		C7F9723C18B584AD0057243B /* addons.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = addons.make; sourceTree = "<group>"; };
-		C7F9723F18B584AD0057243B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		C7F9724018B584AD0057243B /* hats.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hats.wav; sourceTree = "<group>"; };
-		C7F9724118B584AD0057243B /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
-		C7F9724218B584AD0057243B /* snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = snare.wav; sourceTree = "<group>"; };
-		C7F9724318B584AD0057243B /* example-busses.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "example-busses.xcodeproj"; sourceTree = "<group>"; };
-		C7F9724718B584AD0057243B /* openFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		C7F9724818B584AD0057243B /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		C7F9724A18B584AD0057243B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		C7F9724B18B584AD0057243B /* testApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
-		C7F9724C18B584AD0057243B /* testApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
-		C7F9724E18B584AD0057243B /* addons.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = addons.make; sourceTree = "<group>"; };
-		C7F9725118B584AD0057243B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		C7F9725218B584AD0057243B /* chopin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chopin.mp3; sourceTree = "<group>"; };
-		C7F9725318B584AD0057243B /* example-parameters.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "example-parameters.xcodeproj"; sourceTree = "<group>"; };
-		C7F9725718B584AE0057243B /* openFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		C7F9725818B584AE0057243B /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		C7F9725A18B584AE0057243B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		C7F9725B18B584AE0057243B /* testApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
-		C7F9725C18B584AE0057243B /* testApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
-		C7F9725E18B584AE0057243B /* addons.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = addons.make; sourceTree = "<group>"; };
-		C7F9726118B584AE0057243B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		C7F9726218B584AE0057243B /* example-rendering.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "example-rendering.xcodeproj"; sourceTree = "<group>"; };
-		C7F9726618B584AE0057243B /* openFrameworks-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
-		C7F9726718B584AE0057243B /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
-		C7F9726918B584AE0057243B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		C7F9726A18B584AE0057243B /* testApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
-		C7F9726B18B584AE0057243B /* testApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
-		C7F9726C18B584AE0057243B /* license.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
-		C7F9726D18B584AE0057243B /* ofxaddons_thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ofxaddons_thumbnail.png; sourceTree = "<group>"; };
-		C7F9726E18B584AE0057243B /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		C7F9727118B584AE0057243B /* AUParamInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AUParamInfo.cpp; sourceTree = "<group>"; };
 		C7F9727218B584AE0057243B /* AUParamInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AUParamInfo.h; sourceTree = "<group>"; };
 		C7F9727318B584AE0057243B /* CAAUParameter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAAUParameter.cpp; sourceTree = "<group>"; };
@@ -219,6 +191,7 @@
 		C7F9729A18B584AE0057243B /* ofxAudioUnitUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAudioUnitUtils.h; sourceTree = "<group>"; };
 		C7F9729C18B584AE0057243B /* TPCircularBuffer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TPCircularBuffer.c; sourceTree = "<group>"; };
 		C7F9729D18B584AE0057243B /* TPCircularBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPCircularBuffer.h; sourceTree = "<group>"; };
+		C7FB60C818BB8CBB00312CAA /* fftw3f.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = fftw3f.a; path = "requirements/ofxFft/example-basic/lib/osx/fftw3f.a"; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = /System/Library/Frameworks/ApplicationServices.framework; sourceTree = "<absolute>"; };
 		E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
@@ -260,6 +233,7 @@
 				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
 				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
 				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
+				C7FB60C918BB8CBB00312CAA /* fftw3f.a in Frameworks */,
 				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
@@ -326,6 +300,202 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		C7AF3CCF18BCB4B800BAC632 /* example-basic */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF3CD018BCB4B800BAC632 /* BasicExample.xcodeproj */,
+				C7AF3CD418BCB4B800BAC632 /* bin */,
+				C7AF3CD618BCB4B800BAC632 /* lib */,
+				C7AF3CDC18BCB4B800BAC632 /* openFrameworks-Info.plist */,
+				C7AF3CDD18BCB4B800BAC632 /* Project.xcconfig */,
+				C7AF3CDE18BCB4B800BAC632 /* src */,
+			);
+			path = "example-basic";
+			sourceTree = "<group>";
+		};
+		C7AF3CD118BCB4B800BAC632 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF3CE418BCB4B900BAC632 /* BasicExampleDebug.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7AF3CD418BCB4B800BAC632 /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF3CD518BCB4B800BAC632 /* BasicExampleDebug.app */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		C7AF3CD618BCB4B800BAC632 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF3CD718BCB4B800BAC632 /* .gitignore */,
+				C7AF3CD818BCB4B800BAC632 /* osx */,
+				C7AF3CDA18BCB4B800BAC632 /* win32 */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		C7AF3CD818BCB4B800BAC632 /* osx */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF3CD918BCB4B800BAC632 /* fftw3f.a */,
+			);
+			path = osx;
+			sourceTree = "<group>";
+		};
+		C7AF3CDA18BCB4B800BAC632 /* win32 */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF3CDB18BCB4B800BAC632 /* libfftw3f-3.dll */,
+			);
+			path = win32;
+			sourceTree = "<group>";
+		};
+		C7AF3CDE18BCB4B800BAC632 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C7AF3CDF18BCB4B800BAC632 /* main.cpp */,
+				C7AF3CE018BCB4B800BAC632 /* testApp.cpp */,
+				C7AF3CE118BCB4B800BAC632 /* testApp.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C7CA805018B98E6B005858C5 /* ofxAudioDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA806018B98E6B005858C5 /* lib */,
+				C7CA806D18B98E6B005858C5 /* src */,
+			);
+			name = ofxAudioDecoder;
+			path = openFrameworks/addons/ofxAudioDecoder;
+			sourceTree = "<group>";
+		};
+		C7CA806018B98E6B005858C5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA806118B98E6B005858C5 /* include */,
+				C7CA806818B98E6B005858C5 /* src */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		C7CA806118B98E6B005858C5 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA806218B98E6B005858C5 /* apple */,
+				C7CA806518B98E6B005858C5 /* audiodecoder.h */,
+				C7CA806618B98E6B005858C5 /* audiodecoderbase.h */,
+				C7CA806718B98E6B005858C5 /* audiodecodercoreaudio.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C7CA806218B98E6B005858C5 /* apple */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA806318B98E6B005858C5 /* CADebugMacros.h */,
+				C7CA806418B98E6B005858C5 /* CAStreamBasicDescription.h */,
+			);
+			path = apple;
+			sourceTree = "<group>";
+		};
+		C7CA806818B98E6B005858C5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA806918B98E6B005858C5 /* audiodecoderbase.cpp */,
+				C7CA806A18B98E6B005858C5 /* audiodecodercoreaudio.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C7CA806D18B98E6B005858C5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA806E18B98E6B005858C5 /* ofxAudioDecoder.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C7CA80D618B9FC77005858C5 /* ofxFft */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA80D718B9FC77005858C5 /* .gitignore */,
+				C7CA80FE18B9FC77005858C5 /* libs */,
+				C7CA810A18B9FC77005858C5 /* ofxaddons_thumbnail.png */,
+				C7CA810B18B9FC77005858C5 /* readme.md */,
+				C7AF3CCF18BCB4B800BAC632 /* example-basic */,
+				C7CA810C18B9FC77005858C5 /* src */,
+			);
+			path = ofxFft;
+			sourceTree = "<group>";
+		};
+		C7CA80FE18B9FC77005858C5 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				C7FB60C818BB8CBB00312CAA /* fftw3f.a */,
+				C7CA80FF18B9FC77005858C5 /* fftw */,
+				C7CA810418B9FC77005858C5 /* kiss */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		C7CA80FF18B9FC77005858C5 /* fftw */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA810018B9FC77005858C5 /* include */,
+				C7CA810218B9FC77005858C5 /* lib */,
+			);
+			path = fftw;
+			sourceTree = "<group>";
+		};
+		C7CA810018B9FC77005858C5 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA810118B9FC77005858C5 /* fftw3.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		C7CA810218B9FC77005858C5 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA810318B9FC77005858C5 /* .gitignore */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		C7CA810418B9FC77005858C5 /* kiss */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA810518B9FC77005858C5 /* _kiss_fft_guts.h */,
+				C7CA810618B9FC77005858C5 /* kiss_fft.c */,
+				C7CA810718B9FC77005858C5 /* kiss_fft.h */,
+				C7CA810818B9FC77005858C5 /* kiss_fftr.c */,
+				C7CA810918B9FC77005858C5 /* kiss_fftr.h */,
+			);
+			path = kiss;
+			sourceTree = "<group>";
+		};
+		C7CA810C18B9FC77005858C5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				C7CA810D18B9FC77005858C5 /* ofxEasyFft.cpp */,
+				C7CA810E18B9FC77005858C5 /* ofxEasyFft.h */,
+				C7CA810F18B9FC77005858C5 /* ofxFft.cpp */,
+				C7CA811018B9FC77005858C5 /* ofxFft.h */,
+				C7CA811118B9FC77005858C5 /* ofxFftBasic.cpp */,
+				C7CA811218B9FC77005858C5 /* ofxFftBasic.h */,
+				C7CA811318B9FC77005858C5 /* ofxFftw.cpp */,
+				C7CA811418B9FC77005858C5 /* ofxFftw.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		C7EDE53918A906A600E3C5C1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +507,8 @@
 		C7F960D718B584740057243B /* requirements */ = {
 			isa = PBXGroup;
 			children = (
+				C7CA80D618B9FC77005858C5 /* ofxFft */,
+				C7CA805018B98E6B005858C5 /* ofxAudioDecoder */,
 				C7F9721818B584AC0057243B /* ofxAudioUnit */,
 			);
 			path = requirements;
@@ -345,260 +517,9 @@
 		C7F9721818B584AC0057243B /* ofxAudioUnit */ = {
 			isa = PBXGroup;
 			children = (
-				C7F9721918B584AC0057243B /* addon_config.mk */,
-				C7F9721A18B584AC0057243B /* changelog.md */,
-				C7F9721B18B584AC0057243B /* example-1-hello */,
-				C7F9722A18B584AC0057243B /* example-2-oscilloscope */,
-				C7F9723B18B584AD0057243B /* example-3-busses */,
-				C7F9724D18B584AD0057243B /* example-4-parameters */,
-				C7F9725D18B584AE0057243B /* example-5-rendering */,
-				C7F9726C18B584AE0057243B /* license.txt */,
-				C7F9726D18B584AE0057243B /* ofxaddons_thumbnail.png */,
-				C7F9726E18B584AE0057243B /* readme.md */,
 				C7F9726F18B584AE0057243B /* src */,
 			);
 			path = ofxAudioUnit;
-			sourceTree = "<group>";
-		};
-		C7F9721B18B584AC0057243B /* example-1-hello */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9721C18B584AC0057243B /* addons.make */,
-				C7F9721D18B584AC0057243B /* bin */,
-				C7F9722018B584AC0057243B /* example-hello.xcodeproj */,
-				C7F9722418B584AC0057243B /* openFrameworks-Info.plist */,
-				C7F9722518B584AC0057243B /* Project.xcconfig */,
-				C7F9722618B584AC0057243B /* src */,
-			);
-			path = "example-1-hello";
-			sourceTree = "<group>";
-		};
-		C7F9721D18B584AC0057243B /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9721E18B584AC0057243B /* data */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		C7F9721E18B584AC0057243B /* data */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9721F18B584AC0057243B /* .gitkeep */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		C7F9722118B584AC0057243B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7F98C4518B584C80057243B /* example-helloDebug.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C7F9722618B584AC0057243B /* src */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9722718B584AC0057243B /* main.cpp */,
-				C7F9722818B584AC0057243B /* testApp.cpp */,
-				C7F9722918B584AC0057243B /* testApp.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		C7F9722A18B584AC0057243B /* example-2-oscilloscope */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9722B18B584AC0057243B /* addons.make */,
-				C7F9722C18B584AC0057243B /* bin */,
-				C7F9723118B584AC0057243B /* example-oscilloscope.xcodeproj */,
-				C7F9723518B584AD0057243B /* openFrameworks-Info.plist */,
-				C7F9723618B584AD0057243B /* Project.xcconfig */,
-				C7F9723718B584AD0057243B /* src */,
-			);
-			path = "example-2-oscilloscope";
-			sourceTree = "<group>";
-		};
-		C7F9722C18B584AC0057243B /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9722D18B584AC0057243B /* data */,
-				C7F9723018B584AC0057243B /* example-oscilloscopeDebug.app */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		C7F9722D18B584AC0057243B /* data */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9722E18B584AC0057243B /* .gitkeep */,
-				C7F9722F18B584AC0057243B /* entertainer.mp3 */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		C7F9723218B584AC0057243B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7F98C4818B584C80057243B /* example-oscilloscopeDebug.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C7F9723718B584AD0057243B /* src */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9723818B584AD0057243B /* main.cpp */,
-				C7F9723918B584AD0057243B /* testApp.cpp */,
-				C7F9723A18B584AD0057243B /* testApp.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		C7F9723B18B584AD0057243B /* example-3-busses */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9723C18B584AD0057243B /* addons.make */,
-				C7F9723D18B584AD0057243B /* bin */,
-				C7F9724318B584AD0057243B /* example-busses.xcodeproj */,
-				C7F9724718B584AD0057243B /* openFrameworks-Info.plist */,
-				C7F9724818B584AD0057243B /* Project.xcconfig */,
-				C7F9724918B584AD0057243B /* src */,
-			);
-			path = "example-3-busses";
-			sourceTree = "<group>";
-		};
-		C7F9723D18B584AD0057243B /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9723E18B584AD0057243B /* data */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		C7F9723E18B584AD0057243B /* data */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9723F18B584AD0057243B /* .gitkeep */,
-				C7F9724018B584AD0057243B /* hats.wav */,
-				C7F9724118B584AD0057243B /* kick.wav */,
-				C7F9724218B584AD0057243B /* snare.wav */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		C7F9724418B584AD0057243B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7F98C4218B584C80057243B /* example-bussesDebug.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C7F9724918B584AD0057243B /* src */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9724A18B584AD0057243B /* main.cpp */,
-				C7F9724B18B584AD0057243B /* testApp.cpp */,
-				C7F9724C18B584AD0057243B /* testApp.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		C7F9724D18B584AD0057243B /* example-4-parameters */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9724E18B584AD0057243B /* addons.make */,
-				C7F9724F18B584AD0057243B /* bin */,
-				C7F9725318B584AD0057243B /* example-parameters.xcodeproj */,
-				C7F9725718B584AE0057243B /* openFrameworks-Info.plist */,
-				C7F9725818B584AE0057243B /* Project.xcconfig */,
-				C7F9725918B584AE0057243B /* src */,
-			);
-			path = "example-4-parameters";
-			sourceTree = "<group>";
-		};
-		C7F9724F18B584AD0057243B /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9725018B584AD0057243B /* data */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		C7F9725018B584AD0057243B /* data */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9725118B584AD0057243B /* .gitkeep */,
-				C7F9725218B584AD0057243B /* chopin.mp3 */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		C7F9725418B584AD0057243B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7F98C4B18B584C80057243B /* example-parametersDebug.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C7F9725918B584AE0057243B /* src */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9725A18B584AE0057243B /* main.cpp */,
-				C7F9725B18B584AE0057243B /* testApp.cpp */,
-				C7F9725C18B584AE0057243B /* testApp.h */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
-		C7F9725D18B584AE0057243B /* example-5-rendering */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9725E18B584AE0057243B /* addons.make */,
-				C7F9725F18B584AE0057243B /* bin */,
-				C7F9726218B584AE0057243B /* example-rendering.xcodeproj */,
-				C7F9726618B584AE0057243B /* openFrameworks-Info.plist */,
-				C7F9726718B584AE0057243B /* Project.xcconfig */,
-				C7F9726818B584AE0057243B /* src */,
-			);
-			path = "example-5-rendering";
-			sourceTree = "<group>";
-		};
-		C7F9725F18B584AE0057243B /* bin */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9726018B584AE0057243B /* data */,
-			);
-			path = bin;
-			sourceTree = "<group>";
-		};
-		C7F9726018B584AE0057243B /* data */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9726118B584AE0057243B /* .gitkeep */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		C7F9726318B584AE0057243B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C7F98C4E18B584C80057243B /* example-renderingDebug.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C7F9726818B584AE0057243B /* src */ = {
-			isa = PBXGroup;
-			children = (
-				C7F9726918B584AE0057243B /* main.cpp */,
-				C7F9726A18B584AE0057243B /* testApp.cpp */,
-				C7F9726B18B584AE0057243B /* testApp.h */,
-			);
-			path = src;
 			sourceTree = "<group>";
 		};
 		C7F9726F18B584AE0057243B /* src */ = {
@@ -704,6 +625,7 @@
 				C7F3218318A2CA61008C9295 /* Gui.h */,
 				C7F3217318A2C7EC008C9295 /* Loader.cpp */,
 				C7F3217418A2C7EC008C9295 /* Loader.h */,
+				C74806EE18BBA88500745DA4 /* threadedMusicLoader.h */,
 				C7F3217618A2C84D008C9295 /* Player.cpp */,
 				C7F3217718A2C84D008C9295 /* Player.h */,
 				C7F3217918A2C878008C9295 /* Vinyl.cpp */,
@@ -770,24 +692,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C7F9724418B584AD0057243B /* Products */;
-					ProjectRef = C7F9724318B584AD0057243B /* example-busses.xcodeproj */;
-				},
-				{
-					ProductGroup = C7F9722118B584AC0057243B /* Products */;
-					ProjectRef = C7F9722018B584AC0057243B /* example-hello.xcodeproj */;
-				},
-				{
-					ProductGroup = C7F9723218B584AC0057243B /* Products */;
-					ProjectRef = C7F9723118B584AC0057243B /* example-oscilloscope.xcodeproj */;
-				},
-				{
-					ProductGroup = C7F9725418B584AD0057243B /* Products */;
-					ProjectRef = C7F9725318B584AD0057243B /* example-parameters.xcodeproj */;
-				},
-				{
-					ProductGroup = C7F9726318B584AE0057243B /* Products */;
-					ProjectRef = C7F9726218B584AE0057243B /* example-rendering.xcodeproj */;
+					ProductGroup = C7AF3CD118BCB4B800BAC632 /* Products */;
+					ProjectRef = C7AF3CD018BCB4B800BAC632 /* BasicExample.xcodeproj */;
 				},
 				{
 					ProductGroup = C7EDE53918A906A600E3C5C1 /* Products */;
@@ -802,46 +708,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		C7AF3CE418BCB4B900BAC632 /* BasicExampleDebug.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = BasicExampleDebug.app;
+			remoteRef = C7AF3CE318BCB4B900BAC632 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		C7EDE53D18A906A600E3C5C1 /* openFrameworksDebug.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = openFrameworksDebug.a;
 			remoteRef = C7EDE53C18A906A600E3C5C1 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7F98C4218B584C80057243B /* example-bussesDebug.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "example-bussesDebug.app";
-			remoteRef = C7F98C4118B584C80057243B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7F98C4518B584C80057243B /* example-helloDebug.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "example-helloDebug.app";
-			remoteRef = C7F98C4418B584C80057243B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7F98C4818B584C80057243B /* example-oscilloscopeDebug.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "example-oscilloscopeDebug.app";
-			remoteRef = C7F98C4718B584C80057243B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7F98C4B18B584C80057243B /* example-parametersDebug.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "example-parametersDebug.app";
-			remoteRef = C7F98C4A18B584C80057243B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		C7F98C4E18B584C80057243B /* example-renderingDebug.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "example-renderingDebug.app";
-			remoteRef = C7F98C4D18B584C80057243B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -875,6 +753,13 @@
 				C7F3218418A2CA61008C9295 /* Gui.cpp in Sources */,
 				C7F3218118A2C990008C9295 /* Synthetizer.cpp in Sources */,
 				C7F3217B18A2C878008C9295 /* Vinyl.cpp in Sources */,
+				C7CA807218B98E88005858C5 /* audiodecoderbase.cpp in Sources */,
+				C7CA807318B98E88005858C5 /* audiodecodercoreaudio.cpp in Sources */,
+				C7CA812618BA02BB005858C5 /* kiss_fft.c in Sources */,
+				C7CA812718BA02BB005858C5 /* kiss_fftr.c in Sources */,
+				C7CA812F18BA02EB005858C5 /* ofxFft.cpp in Sources */,
+				C7CA813018BA02EB005858C5 /* ofxFftBasic.cpp in Sources */,
+				C7CA813118BA02EB005858C5 /* ofxFftw.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,6 +912,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					/Users/danielfeles/Documents/refreq2/requirements/openFrameworks/libs/openFrameworksCompiled/lib/osx,
+					"/Users/danielfeles/Documents/refreq2/requirements/ofxFft/example-basic/lib/osx",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
@@ -1117,6 +1003,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_50)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					/Users/danielfeles/Documents/refreq2/requirements/openFrameworks/libs/openFrameworksCompiled/lib/osx,
+					"/Users/danielfeles/Documents/refreq2/requirements/ofxFft/example-basic/lib/osx",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -29,26 +29,18 @@ void Gui::drawGui( ){
 
 }
 
-void Gui::handleKeyPressed(int key){
-    if(key == 111){
-        string path = getFilePath();
-        loader->loadFile(path);
-    } else if (key == SPACE_KEY){
-        if(player->getStatus() == PLAYER_PAUSED){
-            player->setStatus(PLAYER_PLAYING);
-        } else {
-            player->setStatus(PLAYER_PAUSED);
-        }
-    };
-}
-
-void Gui::handleDraggedFile(ofDragInfo info){
-    if( info.files.size() > 0 ){
-        loader->loadFile(info.files[0]);
-    }
+void Gui::drawMessage(string message){
+    
+    ofSetColor(255,255,255,200);
+    ofRect(0, 0, ofGetScreenWidth(), ofGetScreenHeight());
+    ofSetColor(0,0,0,200);
+    ofDrawBitmapString(message, 50, 56);
+    
+    cout << message;
 }
 
 string Gui::getFilePath(){
+    /*
     string URL;
 	
     ofFileDialogResult result = ofSystemLoadDialog("Import File", true, "");
@@ -56,4 +48,5 @@ string Gui::getFilePath(){
         URL = result.filePath;
 		return URL;
 	}
+     */
 }
