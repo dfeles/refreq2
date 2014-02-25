@@ -16,24 +16,24 @@ Synthetizer::Synthetizer () {
 }
 
 void Synthetizer::calculateWave (float * output) {
+    
     for (int i = 0; i < INITIAL_BUFFER_SIZE; i++){
         
         wave = 0.0;
-        
-        for(int n = 0;n<PIXELS_READING;n+=1){
+        for(int n = 0; n < PIXELS_READING; n += 2){
             
             
-            if (pixelPickup->readPixels[n][0]>0.000001) {
+            if (pixelPickup->readPixels[n][0]>0.00001) {
                 
                 //if ( phases[n] >= INITIAL_BUFFER_SIZE ) phases[n] -= INITIAL_BUFFER_SIZE;
                 //wave+=(sinesBuffer[1+ (long) phases[n]]) * pixelPickup->readPixels[n][0];
                 
                 
                 int freq = pixelPickup->readPixels[n][1];
-                phases[n] += INITIAL_BUFFER_SIZE/(44100.0/freq);
-                if ( phases[n] >= INITIAL_BUFFER_SIZE ) phases[n] -= INITIAL_BUFFER_SIZE;
+                phases[n] += INITIAL_BUFFER_SIZE/( (float)SAMPLE_RATE/freq);
+                if ( phases[n] > 513 ) phases[n] -= 514;
                 
-                wave+=sinesBuffer[(int)(1+ (long) phases[n]) % 514] * pixelPickup->readPixels[n][0];
+                wave -= sinesBuffer[(int) phases[n]] * pixelPickup->readPixels[n][0];
                 
                 //remainder = phases[n] - floor(phases[n]);
                 //wave+=(float) ((1-remainder) * sineBuffer[1+ (long) phases[n]] + remainder * sineBuffer[2+(long) phases[n]])*amp[n];
@@ -41,7 +41,7 @@ void Synthetizer::calculateWave (float * output) {
             }
         }
         
-        wave/=10.0;
+        wave /= 10.0;
         //if(wave>1.0) wave=1.0;
         //if(wave<-1.0) wave=-1.0;
 		

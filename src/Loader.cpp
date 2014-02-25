@@ -34,12 +34,6 @@ void Loader::loadMusic(string path){
     
     audio.load(path);
     
-    left.clear();
-    right.clear();
-    
-    left.setMode(OF_PRIMITIVE_LINE_STRIP);
-    right.setMode(OF_PRIMITIVE_LINE_STRIP);
-    
     const vector<float>& rawSamples = audio.getRawSamples();
     int channels = audio.getChannels();
     int n = rawSamples.size();
@@ -66,8 +60,13 @@ void Loader::loadMusic(string path){
         for(int y=0; y<PIXELS_READING; y++){
             float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y)/2.0);
             
-            actualColor.set(amplitude * 255.0, amplitude * 255.0, amplitude * 255.0);
+            amplitude = log2(amplitude+1);
             
+            int bright = MIN(amplitude * 254, 254);
+            
+            actualColor.set(bright, bright, bright);
+            
+//            cout << amplitude << endl;
 //            int i = y * frames * 3 + x * 3;
             int index = (x + y*frames)*3;
             

@@ -13,7 +13,7 @@ PixelPickup::PixelPickup(){
     //remember: x can only be between 0 - vinylWidth
     //remember: y can only be between 0 - PIXELS_READING-1
     
-    setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ);
+    setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ, true);
     
     pickupPoint1.x = 200;
     pickupPoint1.y = 1;
@@ -35,7 +35,10 @@ void PixelPickup::getPixels() {
         ofPoint pointToGet = *new ofVec2f(_x,_y);
         
         readPixels[i][0] = vinyl->getPixel(pointToGet).getBrightness()/255.0;
+        
         readPixels[i][1] = getFreq(pointToGet.y);
+        
+        
         if(i%10){
             ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
             ofSetColor(readPixels[i-1][0]*255.0, readPixels[i-1][0]*255.0, readPixels[i-1][0]*255.0,readPixels[i-1][0]*10.0);
@@ -45,11 +48,16 @@ void PixelPickup::getPixels() {
     }
 }
 
-void PixelPickup::setupHertz (float min, float max) {
-    for(int n = 1;n<PIXELS_READING+1;n++){
-        hertzScale[n] = (max-min) / PIXELS_READING * n;
+void PixelPickup::setupHertz (float min, float max, bool logarithmic) {
+    if (logarithmic){
+        for(int n = 1;n<PIXELS_READING+1;n++){
+            hertzScale[n] = log((max-min) / PIXELS_READING) * n;
+        }
+    }else{
+        for(int n = 1;n<PIXELS_READING+1;n++){
+            hertzScale[n] = (max-min) / PIXELS_READING * n;
+        }
     }
-    
 }
 
 int PixelPickup::getFreq(int y) {

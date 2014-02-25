@@ -10,6 +10,7 @@
 #define __refreq2__Loader__
 
 #include <iostream>
+#include <algorithm>
 #include "ofMain.h"
 #include "Vinyl.h"
 #include "refreqConstans.h"
@@ -28,9 +29,7 @@ class Loader {
         ofImage createdSpectrum;
     
     private:
-        ofxAudioDecoder audio;
-        ofMesh left, right;
-    
+        ofxAudioDecoder audio;    
         ofxFft* fft;
 
         void loadMusic(string path);

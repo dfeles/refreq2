@@ -23,7 +23,7 @@ class PixelPickup {
         ofPoint pickupPoint2;
         void getPixels();
         float readPixels [(int)PIXELS_READING][2];
-        void setupHertz (float min, float max);
+        void setupHertz (float min, float max, bool logarithmic);
         int getHertzMin ();
         int getHertzMax ();
         int getFreq(int y);

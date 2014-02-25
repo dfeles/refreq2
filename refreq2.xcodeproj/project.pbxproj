@@ -89,7 +89,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C74806EE18BBA88500745DA4 /* threadedMusicLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = threadedMusicLoader.h; sourceTree = "<group>"; };
 		C7AD8BC918B57ADC0001746B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C7AD8BCA18B57ADC0001746B /* refreq2.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = refreq2.app; sourceTree = "<group>"; };
 		C7AD8BCB18B57ADC0001746B /* refreq2Debug.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = refreq2Debug.app; sourceTree = "<group>"; };
@@ -130,6 +129,7 @@
 		C7CA811218B9FC77005858C5 /* ofxFftBasic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFftBasic.h; sourceTree = "<group>"; };
 		C7CA811318B9FC77005858C5 /* ofxFftw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFftw.cpp; sourceTree = "<group>"; };
 		C7CA811418B9FC77005858C5 /* ofxFftw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFftw.h; sourceTree = "<group>"; };
+		C7DA746C18BCFE5600430C64 /* rrr.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = rrr.icns; sourceTree = "<group>"; };
 		C7EDE53718A906A600E3C5C1 /* CoreOF.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = requirements/openFrameworks/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = "<group>"; };
 		C7EDE53818A906A600E3C5C1 /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = requirements/openFrameworks/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = "<group>"; };
 		C7EDE54018A9070000E3C5C1 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = requirements/openFrameworks/libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -601,6 +601,7 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				C7DA746C18BCFE5600430C64 /* rrr.icns */,
 				C7EDE54318A920B500E3C5C1 /* openFrameworksDebug.a */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
@@ -625,7 +626,6 @@
 				C7F3218318A2CA61008C9295 /* Gui.h */,
 				C7F3217318A2C7EC008C9295 /* Loader.cpp */,
 				C7F3217418A2C7EC008C9295 /* Loader.h */,
-				C74806EE18BBA88500745DA4 /* threadedMusicLoader.h */,
 				C7F3217618A2C84D008C9295 /* Player.cpp */,
 				C7F3217718A2C84D008C9295 /* Player.h */,
 				C7F3217918A2C878008C9295 /* Vinyl.cpp */,
