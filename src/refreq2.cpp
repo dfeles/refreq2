@@ -101,5 +101,4 @@ void Refreq2::dragEvent(ofDragInfo dragInfo){
 void Refreq2::exit() {
     cout << "Iexit";
     // stop the thread
-    musicLoader.stop();
 }

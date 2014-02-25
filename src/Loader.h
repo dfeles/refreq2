@@ -13,6 +13,8 @@
 #include "ofMain.h"
 #include "Vinyl.h"
 #include "refreqConstans.h"
+#include "ofxAudioDecoder.h"
+#include "ofxFft.h"
 #include "Player.h"
 #include "Gui.h"
 
@@ -29,6 +31,8 @@ class Loader {
         ofxAudioDecoder audio;
         ofMesh left, right;
     
+        ofxFft* fft;
+
         void loadMusic(string path);
         void loadPicture(ofFile file);
     
