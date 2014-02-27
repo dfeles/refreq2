@@ -11,9 +11,14 @@
 	<key>fonts</key>
 	<array>
 		<string>Adamas-Regular</string>
+		<string>DIN-Black</string>
+		<string>DIN-Black</string>
+		<string>DIN-Black</string>
+		<string>DIN-Black</string>
+		<string>DIN-Black</string>
 	</array>
 	<key>length</key>
-	<integer>40752</integer>
+	<integer>614655</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

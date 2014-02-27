@@ -44,7 +44,7 @@ void Loader::loadMusic(string path){
     
     int samplesPerFrame = audio.getNumSamples() / frames;
     
-    fft = ofxFft::create(PIXELS_READING*2, OF_FFT_WINDOW_SINE, OF_FFT_BASIC);
+    fft = ofxFft::create(2500, OF_FFT_WINDOW_SINE, OF_FFT_BASIC);
     
     createdSpectrum.clear();
     createdSpectrum.allocate(frames, PIXELS_READING, OF_IMAGE_COLOR);
@@ -58,15 +58,14 @@ void Loader::loadMusic(string path){
         
         ofColor actualColor;
         for(int y=0; y<PIXELS_READING; y++){
-            float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y)/2.0);
+            float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y)/2.0, (float) audio.getSampleRate());
             
-            amplitude = log2(amplitude+1);
-            
-            int bright = MIN(amplitude * 254, 254);
+            //amplitude = log2(amplitude+1);
+            int bright = MIN(amplitude * 255.0, 255);
+            bright = MAX(bright, 0);
             
             actualColor.set(bright, bright, bright);
             
-//            cout << amplitude << endl;
 //            int i = y * frames * 3 + x * 3;
             int index = (x + y*frames)*3;
             

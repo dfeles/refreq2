@@ -99,6 +99,7 @@ void Refreq2::dragEvent(ofDragInfo dragInfo){
 
 //--------------------------------------------------------------
 void Refreq2::exit() {
+    ofSoundStreamStop();
     cout << "Iexit";
     // stop the thread
 }

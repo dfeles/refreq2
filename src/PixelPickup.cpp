@@ -16,7 +16,7 @@ PixelPickup::PixelPickup(){
     setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ, true);
     
     pickupPoint1.x = 200;
-    pickupPoint1.y = 1;
+    pickupPoint1.y = 0;
     
     pickupPoint2.x = 200;
     pickupPoint2.y = PIXELS_READING-1;
