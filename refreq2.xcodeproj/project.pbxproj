@@ -17,6 +17,7 @@
 		C7CA812F18BA02EB005858C5 /* ofxFft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA810F18B9FC77005858C5 /* ofxFft.cpp */; };
 		C7CA813018BA02EB005858C5 /* ofxFftBasic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA811118B9FC77005858C5 /* ofxFftBasic.cpp */; };
 		C7CA813118BA02EB005858C5 /* ofxFftw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA811318B9FC77005858C5 /* ofxFftw.cpp */; };
+		C7ECF46118C470BA00484937 /* fftw3f.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7ECF46018C470BA00484937 /* fftw3f.a */; };
 		C7EDE54118A9070000E3C5C1 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EDE54018A9070000E3C5C1 /* GLUT.framework */; };
 		C7EDE54418A920B600E3C5C1 /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7EDE54318A920B500E3C5C1 /* openFrameworksDebug.a */; };
 		C7F3217518A2C7EC008C9295 /* Loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3217318A2C7EC008C9295 /* Loader.cpp */; };
@@ -26,7 +27,6 @@
 		C7F3218118A2C990008C9295 /* Synthetizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3217F18A2C990008C9295 /* Synthetizer.cpp */; };
 		C7F3218418A2CA61008C9295 /* Gui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3218218A2CA61008C9295 /* Gui.cpp */; };
 		C7F960D418B57C750057243B /* main.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = C7AD8BCD18B57AFA0001746B /* main.jpg */; };
-		C7FB60C918BB8CBB00312CAA /* fftw3f.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7FB60C818BB8CBB00312CAA /* fftw3f.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
 		E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */; };
@@ -130,6 +130,7 @@
 		C7CA811318B9FC77005858C5 /* ofxFftw.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFftw.cpp; sourceTree = "<group>"; };
 		C7CA811418B9FC77005858C5 /* ofxFftw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxFftw.h; sourceTree = "<group>"; };
 		C7DA746C18BCFE5600430C64 /* rrr.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = rrr.icns; sourceTree = "<group>"; };
+		C7ECF46018C470BA00484937 /* fftw3f.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = fftw3f.a; sourceTree = "<group>"; };
 		C7EDE53718A906A600E3C5C1 /* CoreOF.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = requirements/openFrameworks/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = "<group>"; };
 		C7EDE53818A906A600E3C5C1 /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = requirements/openFrameworks/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = "<group>"; };
 		C7EDE54018A9070000E3C5C1 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = requirements/openFrameworks/libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -233,7 +234,7 @@
 				E45BE9810E8CC7DD009D7055 /* CoreServices.framework in Frameworks */,
 				E45BE9830E8CC7DD009D7055 /* OpenGL.framework in Frameworks */,
 				E45BE9840E8CC7DD009D7055 /* QuickTime.framework in Frameworks */,
-				C7FB60C918BB8CBB00312CAA /* fftw3f.a in Frameworks */,
+				C7ECF46118C470BA00484937 /* fftw3f.a in Frameworks */,
 				E4C2424710CC5A17004149E2 /* AppKit.framework in Frameworks */,
 				E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */,
 				E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */,
@@ -605,6 +606,7 @@
 				C7EDE54318A920B500E3C5C1 /* openFrameworksDebug.a */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				C7ECF46018C470BA00484937 /* fftw3f.a */,
 				C7AD8BC718B57ADC0001746B /* bin */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				C7F960D718B584740057243B /* requirements */,
@@ -736,7 +738,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f requirements/of_v0.8.0_osx_release/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
+			shellScript = "cp -f requirements/openFrameworks/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\nmkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\ncp -f \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -913,6 +915,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_52)",
 					/Users/danielfeles/Documents/refreq2/requirements/openFrameworks/libs/openFrameworksCompiled/lib/osx,
 					"/Users/danielfeles/Documents/refreq2/requirements/ofxFft/example-basic/lib/osx",
+					/Users/danielfeles/Documents/refreq2,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
@@ -1004,6 +1007,7 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_51)",
 					/Users/danielfeles/Documents/refreq2/requirements/openFrameworks/libs/openFrameworksCompiled/lib/osx,
 					"/Users/danielfeles/Documents/refreq2/requirements/ofxFft/example-basic/lib/osx",
+					/Users/danielfeles/Documents/refreq2,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
