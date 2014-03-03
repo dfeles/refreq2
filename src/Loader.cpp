@@ -60,7 +60,7 @@ void Loader::loadMusic(string path){
         for(int y=0; y<PIXELS_READING; y++){
             float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y)/2.0, (float) audio.getSampleRate());
             
-            //amplitude = log2(amplitude+1);
+            amplitude = log2(amplitude+1);
             int bright = MIN(amplitude * 255.0, 255);
             bright = MAX(bright, 0);
             
