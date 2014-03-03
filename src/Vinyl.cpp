@@ -38,7 +38,10 @@ void Vinyl::setImage (ofImage image) {
 }
 
 ofColor Vinyl::getPixel(ofPoint point) {
-    return vinylImage.getColor(point.x + (int)(offsetX*vinylImage.getWidth()), point.y);
+//    vinylImage.getTextureReference().get
+//    cout << point.y << endl;
+//    cout << vinylImage.getColor((int)(point.x + (int)(offsetX*vinylImage.getWidth())) % (int)vinylImage.getWidth(), point.y).getBrightness() << endl;
+    return vinylImage.getColor((int)(point.x + (int)(offsetX*vinylImage.getWidth())) % (int)vinylImage.getWidth(), point.y);
     
 }
 

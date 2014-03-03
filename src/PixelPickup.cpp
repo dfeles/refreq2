@@ -31,21 +31,23 @@ void PixelPickup::getPixels() {
     ofLine(pickupPoint1.x * _s, pickupPoint1.y * _s + HEADER_HEIGHT, pickupPoint2.x * _s, pickupPoint2.y * _s + HEADER_HEIGHT);
     for(int i=0; i<PIXELS_READING; i++){
         float _x = pickupPoint1.x + (pickupPoint2.x - pickupPoint1.x) / PIXELS_READING * (float) i;
+        
         float _y = pickupPoint1.y + (pickupPoint2.y - pickupPoint1.y) / PIXELS_READING * (float) i;
-        ofPoint pointToGet = *new ofVec2f(_x,_y);
+        
+        ofPoint pointToGet = *new ofVec2f((int)_x,(int)_y);
         
         readPixels[i][0] = vinyl->getPixel(pointToGet).getBrightness()/255.0;
-        
         readPixels[i][1] = getFreq(pointToGet.y);
         
         
-        if(i%10){
+        if(i%2 == 0){
             ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
             ofSetColor(readPixels[i-1][0]*255.0, readPixels[i-1][0]*255.0, readPixels[i-1][0]*255.0,readPixels[i-1][0]*10.0);
             ofCircle(_x*_s, _y*_s+HEADER_HEIGHT, readPixels[i-1][0]*20.0);
             ofDisableBlendMode();
         }
     }
+    //cout << "NEXTFRAME #########" << endl;
 }
 
 void PixelPickup::setupHertz (float min, float max, bool logarithmic) {
