@@ -11,35 +11,43 @@ int main( ){
 
     if(appWindow) {
         
-        NSView *themeView = [appWindow.self.contentView superview];
-        NSUInteger adj = 6;
         
-        int x = 100; //possition x
-        int y = 100; //possition y
+        [appWindow setTitle:@"refreq2"];
         
-        int width = 130;
-        int height = 40;
-        
-        IBOutlet NSToolbar *toolbar;
+        NSToolbar *toolbar = [[NSToolbar alloc] initWithIdentifier:@"toolbar"];
         
         [toolbar setAllowsUserCustomization:YES];
+        [toolbar setAutosavesConfiguration:YES];
+        [toolbar setDisplayMode:NSToolbarDisplayModeDefault];
+        
+//        [toolbar setDelegate:appWindow.self];
         
         
-        NSButton *miniaturizeButton = [[[NSButton alloc] initWithFrame:NSMakeRect(x, y, width, height)] autorelease];
-        [[appWindow contentView] addSubview: miniaturizeButton];
-        [miniaturizeButton setTitle: @"ha"];
-        [miniaturizeButton setTransparent:false];
+        [appWindow setToolbar:toolbar];
+        [toolbar release];
         
-        [miniaturizeButton setTarget:appWindow.self];
-        [miniaturizeButton setAction:@selector(buttonPressed)];
         
-        //NSButton *miniaturizeButton = [appWindow.self standardWindowButton:NSWindowMiniaturizeButton];
+        NSView *themeView = [appWindow.self.contentView superview];
         
-        [miniaturizeButton removeFromSuperview];
-        miniaturizeButton.frame = NSMakeRect( miniaturizeButton.frame.origin.x,
-                                            appWindow.frame.size.height - miniaturizeButton.frame.size.height - adj,
-                                            miniaturizeButton.frame.size.width, miniaturizeButton.frame.size.height);
-        [themeView addSubview:miniaturizeButton];
+        
+        
+        NSToolbarItem *item = [[NSToolbarItem alloc] initWithItemIdentifier:@"toolbarItem"];
+        [item setLabel:@"haliho"];
+        
+        
+        
+        NSButton *button = [[NSButton alloc]init];
+        [button setImage:[NSImage imageNamed:@"StarEmpty"]];
+        [button setAlternateImage:[NSImage imageNamed:@"StarFull"]];
+        [button setImagePosition:NSImageOnly];
+        [button setBordered:NO];
+        
+
+        
+        
+        
+        
+//        [toolbar setView:miniaturizeButton];
         
        // [titleBarView setHidden:YES];
         // make your obj-c calls here
