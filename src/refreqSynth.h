@@ -11,13 +11,19 @@
 
 #include "ofMain.h"
 #include <iostream>
+#include "Synthetizer.h"
 
-class RefreqSynth {
+extern Synthetizer* synthetizer;
+
+class RefreqSynth : public ofBaseApp{
 public:
+	void setup();
+    void exit();
     
 private:
 	void audioRequested 	(float * input, int bufferSize, int nChannels); /* output method */
 	void audioReceived 	(float * input, int bufferSize, int nChannels); /* input method */
+    
 };
 
 #endif /* defined(__refreq2__refreqSynth__) */

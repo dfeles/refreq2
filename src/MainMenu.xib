@@ -649,7 +649,7 @@
                 </menuItem>
             </items>
         </menu>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="eHF-7s-NRD">
+        <window title="refreq2" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="eHF-7s-NRD">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -685,13 +685,15 @@
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="d0g-vL-zut"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="EeX-dA-8TH"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="bDx-hO-Umj"/>
+                    <toolbarItem implicitItemIdentifier="473EDFA5-2545-471B-BD3B-9340C6BCEEA3" explicitItemIdentifier="Bluetooth" label="Toolbar Item" paletteLabel="Toolbar Item" tag="-1" image="NSBluetoothTemplate" id="d4t-R0-B5r"/>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="d0g-vL-zut"/>
-                    <toolbarItem reference="bDx-hO-Umj"/>
                 </defaultToolbarItems>
             </toolbar>
         </window>
     </objects>
+    <resources>
+        <image name="NSBluetoothTemplate" width="7" height="14"/>
+    </resources>
 </document>

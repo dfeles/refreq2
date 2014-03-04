@@ -9,17 +9,18 @@ Loader* loader = new Loader;
 Player* player = new Player;
 PixelPickup* pixelPickup = new PixelPickup;
 Synthetizer* synthetizer = new Synthetizer;
-RefreqSynth* refreqSynth = new RefreqSynth;
 ofxFft* fft;
 
 - (void)setup
 {
     ofSetVerticalSync(true);
 	ofDisableDataPath();
+    [self setFrameRate:30];
+    
     loader->loadFile(MAIN_IMAGE);
-    ofSoundStreamSetup(2, 2, SAMPLE_RATE, INITIAL_BUFFER_SIZE, 4);
-    ofSoundStreamStop();
     loadPathNextFrame = "";
+    
+    ofRunApp(new RefreqSynth());
 }
 
 - (void)update
@@ -92,13 +93,6 @@ ofxFft* fft;
 - (void)windowResized:(NSSize)size
 {
     vinyl->resizeWindow();
-}
-
-- (void)audioRequested:(float *)output :(int)bufferSize :(int)nChannels{
-    synthetizer -> calculateWave(output);
-}
-
-- (void)audioReceived:(float *)input :(int)bufferSize :(int)nChannels{
 }
 
 @end
