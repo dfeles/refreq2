@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C7CA807218B98E88005858C5 /* audiodecoderbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA806918B98E6B005858C5 /* audiodecoderbase.cpp */; };
-		C7CA807318B98E88005858C5 /* audiodecodercoreaudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7CA806A18B98E6B005858C5 /* audiodecodercoreaudio.cpp */; };
+		5275C8B718C5FF8800BB602D /* audiodecoderbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5275C8AC18C5FF7100BB602D /* audiodecoderbase.cpp */; };
+		5275C8B818C5FF8B00BB602D /* audiodecodercoreaudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5275C8AD18C5FF7100BB602D /* audiodecodercoreaudio.cpp */; };
 		C7CA812618BA02BB005858C5 /* kiss_fft.c in Sources */ = {isa = PBXBuildFile; fileRef = C7CA810618B9FC77005858C5 /* kiss_fft.c */; };
 		C7CA812718BA02BB005858C5 /* kiss_fftr.c in Sources */ = {isa = PBXBuildFile; fileRef = C7CA810818B9FC77005858C5 /* kiss_fftr.c */; };
 		C7CA812C18BA02DB005858C5 /* ofxFft.cpp in CopyFiles */ = {isa = PBXBuildFile; fileRef = C7CA810F18B9FC77005858C5 /* ofxFft.cpp */; };
@@ -89,6 +89,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5275C89418C5FF7100BB602D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		5275C8A618C5FF7100BB602D /* CADebugMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		5275C8A718C5FF7100BB602D /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		5275C8A818C5FF7100BB602D /* audiodecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecoder.h; sourceTree = "<group>"; };
+		5275C8A918C5FF7100BB602D /* audiodecoderbase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecoderbase.h; sourceTree = "<group>"; };
+		5275C8AA18C5FF7100BB602D /* audiodecodercoreaudio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audiodecodercoreaudio.h; sourceTree = "<group>"; };
+		5275C8AC18C5FF7100BB602D /* audiodecoderbase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = audiodecoderbase.cpp; sourceTree = "<group>"; };
+		5275C8AD18C5FF7100BB602D /* audiodecodercoreaudio.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = audiodecodercoreaudio.cpp; sourceTree = "<group>"; };
+		5275C8AE18C5FF7100BB602D /* license.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = license.md; sourceTree = "<group>"; };
+		5275C8AF18C5FF7100BB602D /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		5275C8B118C5FF7100BB602D /* ofxAudioDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxAudioDecoder.h; sourceTree = "<group>"; };
 		C7AD8BC918B57ADC0001746B /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		C7AD8BCA18B57ADC0001746B /* refreq2.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = refreq2.app; sourceTree = "<group>"; };
 		C7AD8BCB18B57ADC0001746B /* refreq2Debug.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = refreq2Debug.app; sourceTree = "<group>"; };
@@ -245,6 +256,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5275C89318C5FF7100BB602D /* ofxAudioDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				5275C89418C5FF7100BB602D /* .gitignore */,
+				5275C8A318C5FF7100BB602D /* lib */,
+				5275C8AE18C5FF7100BB602D /* license.md */,
+				5275C8AF18C5FF7100BB602D /* readme.md */,
+				5275C8B018C5FF7100BB602D /* src */,
+			);
+			path = ofxAudioDecoder;
+			sourceTree = "<group>";
+		};
+		5275C8A318C5FF7100BB602D /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				5275C8A418C5FF7100BB602D /* include */,
+				5275C8AB18C5FF7100BB602D /* src */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		5275C8A418C5FF7100BB602D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5275C8A518C5FF7100BB602D /* apple */,
+				5275C8A818C5FF7100BB602D /* audiodecoder.h */,
+				5275C8A918C5FF7100BB602D /* audiodecoderbase.h */,
+				5275C8AA18C5FF7100BB602D /* audiodecodercoreaudio.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		5275C8A518C5FF7100BB602D /* apple */ = {
+			isa = PBXGroup;
+			children = (
+				5275C8A618C5FF7100BB602D /* CADebugMacros.h */,
+				5275C8A718C5FF7100BB602D /* CAStreamBasicDescription.h */,
+			);
+			path = apple;
+			sourceTree = "<group>";
+		};
+		5275C8AB18C5FF7100BB602D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5275C8AC18C5FF7100BB602D /* audiodecoderbase.cpp */,
+				5275C8AD18C5FF7100BB602D /* audiodecodercoreaudio.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		5275C8B018C5FF7100BB602D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5275C8B118C5FF7100BB602D /* ofxAudioDecoder.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,6 +578,7 @@
 			isa = PBXGroup;
 			children = (
 				C7CA80D618B9FC77005858C5 /* ofxFft */,
+				5275C89318C5FF7100BB602D /* ofxAudioDecoder */,
 				C7CA805018B98E6B005858C5 /* ofxAudioDecoder */,
 				C7F9721818B584AC0057243B /* ofxAudioUnit */,
 			);
@@ -755,8 +825,8 @@
 				C7F3218418A2CA61008C9295 /* Gui.cpp in Sources */,
 				C7F3218118A2C990008C9295 /* Synthetizer.cpp in Sources */,
 				C7F3217B18A2C878008C9295 /* Vinyl.cpp in Sources */,
-				C7CA807218B98E88005858C5 /* audiodecoderbase.cpp in Sources */,
-				C7CA807318B98E88005858C5 /* audiodecodercoreaudio.cpp in Sources */,
+				5275C8B718C5FF8800BB602D /* audiodecoderbase.cpp in Sources */,
+				5275C8B818C5FF8B00BB602D /* audiodecodercoreaudio.cpp in Sources */,
 				C7CA812618BA02BB005858C5 /* kiss_fft.c in Sources */,
 				C7CA812718BA02BB005858C5 /* kiss_fftr.c in Sources */,
 				C7CA812F18BA02EB005858C5 /* ofxFft.cpp in Sources */,
@@ -919,7 +989,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1011,7 +1081,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
