@@ -16,7 +16,7 @@
 #define DEFAULT_MAX_HZ 22050
 
 #define HEADER_HEIGHT 0
-#define FOOTER_HEIGHT 70
+#define FOOTER_HEIGHT 0
 
 #define SPACE_KEY 32
 

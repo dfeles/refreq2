@@ -649,21 +649,6 @@
                 </menuItem>
             </items>
         </menu>
-        <toolbar implicitIdentifier="09D11707-F4A3-4FD5-970E-AC5832E91C2B" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="IpX-Vc-7ak">
-            <allowedToolbarItems>
-                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="d0g-vL-zut"/>
-                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="qoM-rz-mDd"/>
-                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="khb-Ur-ub5"/>
-                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="EeX-dA-8TH"/>
-                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="bDx-hO-Umj"/>
-            </allowedToolbarItems>
-            <defaultToolbarItems>
-                <toolbarItem reference="d0g-vL-zut"/>
-                <toolbarItem reference="qoM-rz-mDd"/>
-                <toolbarItem reference="bDx-hO-Umj"/>
-                <toolbarItem reference="khb-Ur-ub5"/>
-            </defaultToolbarItems>
-        </toolbar>
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="eHF-7s-NRD">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
@@ -675,7 +660,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="1280" height="720"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <openGLView misplaced="YES" useAuxiliaryDepthBufferStencil="NO" useDoubleBufferingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zWj-Fb-Fbg" customClass="Refreq2">
+                    <openGLView misplaced="YES" depthSize="16bit" numberOfAuxiliaryBuffers="1" useAuxiliaryDepthBufferStencil="NO" useDoubleBufferingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zWj-Fb-Fbg" customClass="Refreq2">
                         <rect key="frame" x="0.0" y="59" width="1280" height="661"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </openGLView>
@@ -696,6 +681,17 @@
                     <constraint firstItem="gfB-PL-akr" firstAttribute="top" secondItem="zWj-Fb-Fbg" secondAttribute="bottom" constant="20" id="sTT-1h-LlF"/>
                 </constraints>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="5CC00160-BEE8-4FDF-B9DD-393DCF455DAD" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="IpX-Vc-7ak">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="d0g-vL-zut"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="EeX-dA-8TH"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="bDx-hO-Umj"/>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="d0g-vL-zut"/>
+                    <toolbarItem reference="bDx-hO-Umj"/>
+                </defaultToolbarItems>
+            </toolbar>
         </window>
     </objects>
 </document>

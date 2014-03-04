@@ -47,4 +47,5 @@ string Gui::getFilePath(){
         URL = result.filePath;
 		return URL;
 	}
+    return "";
 }

@@ -13,6 +13,9 @@
 
 
 @interface Refreq2 : ofxCocoaGLView {
+    
+    string loadPathNextFrame;
+    
 }
 
 

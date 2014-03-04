@@ -12,10 +12,22 @@
 
 Vinyl::Vinyl () {
 }
-
-void Vinyl::setImage (ofImage image) {
+void Vinyl::setImageFromPath(string path) {
+    vinylImage.clear();
+    vinylImage.loadImage(path);
+    if(vinylImage.bAllocated()){
+        setImage();
+    }
+}
+void Vinyl::setImageFromSpectrum(ofImage image) {
     vinylImage.clear();
     vinylImage = image;
+    setImage();
+}
+
+
+void Vinyl::setImage () {
+    quad.clear();
 
     ofDisableArbTex();
 	quad.getVertices().resize(4);
@@ -29,8 +41,6 @@ void Vinyl::setImage (ofImage image) {
     h = vinylImage.getHeight()*s;
     
     vinylImage.resize(w, h);
-    
-    something = vinylImage.getPixelsRef().getPixels();
     
     if(vinylImage.bAllocated()){
         updateTexture();
@@ -50,6 +60,7 @@ void Vinyl::setOffsetX(float _offsetX) {
 }
 
 void Vinyl::drawVinyl() {
+    
     if(vinylImage.getHeight()>0){
         offXRatio = 0 + offsetX;
 		offYRatio = 0;
@@ -61,6 +72,7 @@ void Vinyl::drawVinyl() {
         quad.draw();
         vinylImage.unbind();
     }
+    
 }
 
 void Vinyl::resizeWindow() {

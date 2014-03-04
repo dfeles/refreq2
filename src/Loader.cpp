@@ -76,14 +76,14 @@ void Loader::loadMusic(string path){
         }
     }
     
-    vinyl->setImage(createdSpectrum);
+    vinyl->setImageFromSpectrum(createdSpectrum);
     cout << "im done" << endl;
     
 }
 
 void Loader::loadPicture(ofFile file){
     
-    ofImage loadedImage;
-    loadedImage.loadImage(file.getAbsolutePath());
-    vinyl->setImage(loadedImage);
+//    ofImage loadedImage;
+//    loadedImage.loadImage(file.getAbsolutePath());
+    vinyl->setImageFromPath(file.getAbsolutePath());
 }
