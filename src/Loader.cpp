@@ -14,7 +14,7 @@ void Loader( ){
 }
 
 void Loader::loadFile(string path){
-    gui->drawMessage("Loading");
+    //gui->drawMessage("Loading");
     ofFile fileToLoad(path);
     string extension = ofToLower(fileToLoad.getExtension());
     if (extension == "mp3" or extension == "wav" or extension == "m4a"){
@@ -76,14 +76,14 @@ void Loader::loadMusic(string path){
         }
     }
     
-    vinyl->setImage(createdSpectrum);
+    vinyl->setImageFromSpectrum(createdSpectrum);
     cout << "im done" << endl;
     
 }
 
 void Loader::loadPicture(ofFile file){
     
-    ofImage loadedImage;
-    loadedImage.loadImage(file.getAbsolutePath());
-    vinyl->setImage(loadedImage);
+//    ofImage loadedImage;
+//    loadedImage.loadImage(file.getAbsolutePath());
+    vinyl->setImageFromPath(file.getAbsolutePath());
 }

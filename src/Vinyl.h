@@ -15,14 +15,17 @@
 class Vinyl {
     public:
         Vinyl();
-        void setImage (ofImage image);
+        void setImageFromPath(string path);
+        void setImageFromSpectrum(ofImage image);
+    
+    
         ofColor getPixel (ofPoint point);
         void drawVinyl ();
         void resizeWindow();
         void setOffsetX(float _offsetX);
         float w;
     private:
-        unsigned char * something;
+        void setImage ();
         void updateTexture();
     
         float vinylHeight;
