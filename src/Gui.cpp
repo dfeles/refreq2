@@ -40,6 +40,7 @@ void Gui::drawMessage(string message){
 }
 
 string Gui::getFilePath(){
+    /*
     string URL;
 	
     ofFileDialogResult result = ofSystemLoadDialog("Import File", true, "");
@@ -47,4 +48,5 @@ string Gui::getFilePath(){
         URL = result.filePath;
 		return URL;
 	}
+     */
 }
