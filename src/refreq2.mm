@@ -17,8 +17,8 @@ ofxFft* fft;
     ofSetVerticalSync(true);
 	ofDisableDataPath();
     loader->loadFile(MAIN_IMAGE);
-    //ofSoundStreamSetup(2, 2, refreqSynth, SAMPLE_RATE, INITIAL_BUFFER_SIZE, 4);
-    //ofSoundStreamStop();
+    ofSoundStreamSetup(2, 2, SAMPLE_RATE, INITIAL_BUFFER_SIZE, 4);
+    ofSoundStreamStop();
 }
 
 - (void)update
