@@ -1,5 +1,103 @@
-#include "Refreq2.h"
+#include "refreq2.h"
+#include <stdlib.h>
 
+@implementation Refreq2
+
+Gui* gui = new Gui;
+Vinyl* vinyl = new Vinyl;
+Loader* loader = new Loader;
+Player* player = new Player;
+PixelPickup* pixelPickup = new PixelPickup;
+Synthetizer* synthetizer = new Synthetizer;
+RefreqSynth* refreqSynth = new RefreqSynth;
+ofxFft* fft;
+
+- (void)setup
+{
+    ofSetVerticalSync(true);
+	ofDisableDataPath();
+    loader->loadFile(MAIN_IMAGE);
+    //ofSoundStreamSetup(2, 2, refreqSynth, SAMPLE_RATE, INITIAL_BUFFER_SIZE, 4);
+    //ofSoundStreamStop();
+}
+
+- (void)update
+{
+}
+
+- (void)draw
+{
+    player->update();
+    gui->drawGui();
+    
+	ofCircle(self.mouseX, self.mouseY, 100);
+    
+}
+
+- (void)exit
+{
+	ofSoundStreamStop();
+    cout << "Iexit";
+}
+
+-(void)changeColor:(id)sender
+{
+    
+}
+
+- (void)keyPressed:(int)key
+{
+	if(key == 111){
+        string path = gui->getFilePath();
+        loader->loadFile(path);
+    } else if (key == SPACE_KEY){
+        if(player->getStatus() == PLAYER_PAUSED){
+            player->setStatus(PLAYER_PLAYING);
+        } else {
+            player->setStatus(PLAYER_PAUSED);
+        }
+    }
+}
+
+- (void)keyReleased:(int)key
+{
+	
+}
+
+- (void)mouseMoved:(NSPoint)p
+{
+	
+}
+
+- (void)mouseDragged:(NSPoint)p button:(int)button
+{
+	
+}
+
+- (void)mousePressed:(NSPoint)p button:(int)button
+{
+	
+}
+
+- (void)mouseReleased:(NSPoint)p button:(int)button
+{
+	
+}
+
+- (void)windowResized:(NSSize)size
+{
+	
+}
+
+- (void)audioRequested:(float *)output :(int)bufferSize :(int)nChannels{
+    synthetizer -> calculateWave(output);
+}
+
+- (void)audioReceived:(float *)input :(int)bufferSize :(int)nChannels{
+}
+
+
+/*
 Gui* gui = new Gui;
 Vinyl* vinyl = new Vinyl;
 Loader* loader = new Loader;
@@ -102,4 +200,8 @@ void Refreq2::exit() {
     ofSoundStreamStop();
     cout << "Iexit";
     // stop the thread
-}
+ }
+ 
+ */
+
+@end

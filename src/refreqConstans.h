@@ -15,7 +15,7 @@
 #define DEFAULT_MIN_HZ 1
 #define DEFAULT_MAX_HZ 22050
 
-#define HEADER_HEIGHT 80
+#define HEADER_HEIGHT 0
 #define FOOTER_HEIGHT 70
 
 #define SPACE_KEY 32
@@ -27,7 +27,7 @@
 #define PIXELS_PER_FRAME 1
 #define FRAME_PER_SECOND 30
 
-#define MAIN_IMAGE "../Resources/main.jpg"
+#define MAIN_IMAGE "refreq2.app/Contents/Resources/main.jpg"
 
 
 

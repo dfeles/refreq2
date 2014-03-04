@@ -16,6 +16,8 @@
 		<string>https://github.com/kylemcdonald/ofxFft.git</string>
 		<key>78F1522A-2F79-4CDD-8FE1-C3BC93BB64FF</key>
 		<string>https://github.com/admsyn/ofxAudioUnit.git</string>
+		<key>7A447E5D-8999-486F-A6DE-10A854B04CEE</key>
+		<string>https://github.com/satoruhiga/ofxCocoaGLView.git</string>
 		<key>E35CFA5F-F75A-44DB-A7A9-D435DD59AA88</key>
 		<string>https://github.com/openframeworks/openFrameworks.git</string>
 		<key>E975DC25-173E-45CA-B0C5-BCEC1D0D766B</key>
@@ -31,6 +33,8 @@
 		<string>../../requirements/ofxFft</string>
 		<key>78F1522A-2F79-4CDD-8FE1-C3BC93BB64FF</key>
 		<string>../../requirements/ofxAudioUnit</string>
+		<key>7A447E5D-8999-486F-A6DE-10A854B04CEE</key>
+		<string>../../requirements/ofxCocoaGLView</string>
 		<key>E35CFA5F-F75A-44DB-A7A9-D435DD59AA88</key>
 		<string>../../requirements/openFrameworks</string>
 		<key>E975DC25-173E-45CA-B0C5-BCEC1D0D766B</key>
@@ -59,6 +63,14 @@
 			<string>78F1522A-2F79-4CDD-8FE1-C3BC93BB64FF</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ofxAudioUnit</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7A447E5D-8999-486F-A6DE-10A854B04CEE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ofxCocoaGLView</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

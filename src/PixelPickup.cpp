@@ -13,7 +13,7 @@ PixelPickup::PixelPickup(){
     //remember: x can only be between 0 - vinylWidth
     //remember: y can only be between 0 - PIXELS_READING-1
     
-    setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ, true);
+    setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ, false);
     
     pickupPoint1.x = 200;
     pickupPoint1.y = 0;

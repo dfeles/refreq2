@@ -14,7 +14,7 @@ void Loader( ){
 }
 
 void Loader::loadFile(string path){
-    gui->drawMessage("Loading");
+    //gui->drawMessage("Loading");
     ofFile fileToLoad(path);
     string extension = ofToLower(fileToLoad.getExtension());
     if (extension == "mp3" or extension == "wav" or extension == "m4a"){
