@@ -24,6 +24,7 @@ public:
     void update ();
     int getStatus ();
     int getSpeed ();
+    float getCurrentTime ();
     void setStatus (int status);
     void setSpeed (float _speed);
     void setCurrentTime (float _time);

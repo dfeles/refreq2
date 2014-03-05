@@ -11,8 +11,11 @@ PixelPickup* pixelPickup = new PixelPickup;
 Synthetizer* synthetizer = new Synthetizer;
 ofxFft* fft;
 
+
 - (void)setup
 {
+    appDelegate = [[NSApplication sharedApplication] delegate];
+    
     ofSetVerticalSync(true);
 	ofDisableDataPath();
     [self setFrameRate:30];
@@ -35,8 +38,11 @@ ofxFft* fft;
     }
     
     player->update();
+    if(player->getStatus() == PLAYER_PLAYING){
+        float time = player->getCurrentTime()*TIME_SLIDER_MAX_VALUE;
+        [appDelegate setUpTimeline:time];
+    }
     gui->drawGui();
-    
     
     
 }
@@ -47,9 +53,20 @@ ofxFft* fft;
     cout << "Iexit";
 }
 
--(void)changeColor:(id)sender
+-(void)changeTime:(id)sender
 {
-    
+    player->setCurrentTime([sender floatValue]/100.0);
+}
+- (void)playPlayer
+{
+    if(player->getStatus() == PLAYER_PAUSED){
+        player->setStatus(PLAYER_PLAYING);
+        [appDelegate setUpPlayButton:true];
+        
+    } else {
+        player->setStatus(PLAYER_PAUSED);
+        [appDelegate setUpPlayButton:false];
+    }
 }
 
 - (void)keyPressed:(int)key
@@ -57,11 +74,7 @@ ofxFft* fft;
 	if(key == 111){
         loadPathNextFrame = gui->getFilePath();
     } else if (key == SPACE_KEY){
-        if(player->getStatus() == PLAYER_PAUSED){
-            player->setStatus(PLAYER_PLAYING);
-        } else {
-            player->setStatus(PLAYER_PAUSED);
-        }
+        [self playPlayer];
     }
 }
 

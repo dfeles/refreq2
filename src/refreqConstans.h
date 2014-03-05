@@ -27,6 +27,8 @@
 #define PIXELS_PER_FRAME 1
 #define FRAME_PER_SECOND 30
 
+#define TIME_SLIDER_MAX_VALUE 10000
+
 #define MAIN_IMAGE "refreq2.app/Contents/Resources/main.jpg"
 
 

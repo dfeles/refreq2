@@ -10,15 +10,15 @@
 	<string>4570185e2c9ded14ebc287c802202c126573b527</string>
 	<key>fonts</key>
 	<array>
-		<string>Adamas-Regular</string>
-		<string>DIN-Black</string>
-		<string>DIN-Black</string>
-		<string>DIN-Black</string>
-		<string>DIN-Black</string>
-		<string>DIN-Black</string>
+		<string>.LucidaGrandeUI</string>
+		<string>DinHBlackBlack</string>
+		<string>DinHBlackBlack</string>
+		<string>DinHBlackBlack</string>
+		<string>.LucidaGrandeUI</string>
+		<string>DinHBlackBlack</string>
 	</array>
 	<key>length</key>
-	<integer>614655</integer>
+	<integer>620540</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

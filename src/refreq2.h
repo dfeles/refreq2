@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "AppDelegate.h"
 #include "ofxCocoaGLView.h"
 #include "Gui.h"
 #include "Vinyl.h"
@@ -15,6 +16,7 @@
 @interface Refreq2 : ofxCocoaGLView {
     
     string loadPathNextFrame;
+    AppDelegate *appDelegate;
     
 }
 
@@ -33,7 +35,8 @@
 - (void)mouseReleased:(NSPoint)p button:(int)button;
 - (void)windowResized:(NSSize)size;
 
-- (void)changeColor:(id)sender;
+- (void)changeTime:(id)sender;
+- (void)playPlayer;
 
 
 

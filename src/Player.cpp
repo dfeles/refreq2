@@ -33,6 +33,10 @@ int Player::getSpeed () {
     return speed;
 }
 
+float Player::getCurrentTime () {
+    return currentTime;
+}
+
 void Player::setStatus (int _status) {
     status = _status;
     
@@ -52,6 +56,7 @@ void Player::setCurrentTime (float _time) {
     if(_time > 1){
         _time = 0;
     }
+    cout << _time << endl;
     currentTime = _time;
 }
 

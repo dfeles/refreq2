@@ -9,7 +9,6 @@
 #include "refreqSynth.h"
 
 void RefreqSynth::setup() {
-    cout << "helo";
     ofSoundStreamSetup(2, 2, SAMPLE_RATE, INITIAL_BUFFER_SIZE, 4);
     ofSoundStreamStop();
 }
