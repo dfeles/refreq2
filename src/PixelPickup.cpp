@@ -14,12 +14,8 @@ PixelPickup::PixelPickup(){
     //remember: y can only be between 0 - PIXELS_READING-1
     
     setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ, false);
-    
-    pickupPoint1.x = 200;
-    pickupPoint1.y = 0;
-    
-    pickupPoint2.x = 200;
-    pickupPoint2.y = PIXELS_READING-1;
+    setTopPickupPoints(200,0);
+    setBottomPickupPoints(200,660);
     
     for(int i=0; i<PIXELS_READING; i++){
          readPixels[i][0] = 0;
@@ -28,11 +24,11 @@ PixelPickup::PixelPickup(){
 
 void PixelPickup::getPixels() {
     float _s = (float)(ofGetHeight()-HEADER_HEIGHT-FOOTER_HEIGHT)/(float)PIXELS_READING;
-    ofLine(pickupPoint1.x * _s, pickupPoint1.y * _s + HEADER_HEIGHT, pickupPoint2.x * _s, pickupPoint2.y * _s + HEADER_HEIGHT);
+    ofLine(pickupPointTop.x * _s, pickupPointTop.y * _s + HEADER_HEIGHT, pickupPointBottom.x * _s, pickupPointBottom.y * _s + HEADER_HEIGHT);
     for(int i=0; i<PIXELS_READING; i++){
-        float _x = pickupPoint1.x + (pickupPoint2.x - pickupPoint1.x) / PIXELS_READING * (float) i;
+        float _x = pickupPointTop.x + (pickupPointBottom.x - pickupPointTop.x) / PIXELS_READING * (float) i;
         
-        float _y = pickupPoint1.y + (pickupPoint2.y - pickupPoint1.y) / PIXELS_READING * (float) i;
+        float _y = pickupPointTop.y + (pickupPointBottom.y - pickupPointTop.y) / PIXELS_READING * (float) i;
         
         ofPoint pointToGet = *new ofVec2f((int)_x,(int)_y);
         
@@ -47,7 +43,36 @@ void PixelPickup::getPixels() {
             ofDisableBlendMode();
         }
     }
-    //cout << "NEXTFRAME #########" << endl;
+}
+
+void PixelPickup::setTopPickupPoints(float x1, float y1) {
+    y1 = limitY(y1);
+    x1 = limitX(x1);
+
+    pickupPointTop.x = x1;
+    pickupPointTop.y = y1;
+}
+
+
+void PixelPickup::setBottomPickupPoints(float x2, float y2) {
+    y2 = limitY(y2);
+    x2 = limitX(x2);
+
+    pickupPointBottom.x = x2;
+    pickupPointBottom.y = y2;
+}
+
+float PixelPickup::limitY (float y) {
+    y *= PIXELS_READING / vinyl->getVinylHeight();
+    
+    y = MIN(y, PIXELS_READING-1);
+    y = MAX(y, 0);
+    return y;
+}
+
+float PixelPickup::limitX (float x) {
+    x *= PIXELS_READING / vinyl->getVinylHeight();
+    return x;
 }
 
 void PixelPickup::setupHertz (float min, float max, bool logarithmic) {

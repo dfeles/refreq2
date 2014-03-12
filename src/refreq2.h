@@ -16,6 +16,7 @@
 @interface Refreq2 : ofxCocoaGLView {
     
     string loadPathNextFrame;
+    string mainDataPath;
     AppDelegate *appDelegate;
     
 }
@@ -36,6 +37,8 @@
 - (void)windowResized:(NSSize)size;
 
 - (void)changeTime:(id)sender;
+- (void)setPickupTop:(NSPoint)point;
+- (void)setPickupBottom:(NSPoint)point;
 - (void)playPlayer;
 
 

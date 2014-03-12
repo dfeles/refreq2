@@ -14,16 +14,36 @@ ofxFft* fft;
 
 - (void)setup
 {
+    
+    NSRect backingBounds = [self convertRectToBacking:[self bounds]];
+    
+    GLsizei backingPixelWidth  = (GLsizei)(backingBounds.size.width),
+    backingPixelHeight = (GLsizei)(backingBounds.size.height);
+    
+    // Set viewport
+    glViewport(0, 0, backingPixelWidth, backingPixelHeight);
+    
+    //    [[self layer] setContentsScale:[[self window] backingScaleFactor]];
+    
+    
     appDelegate = [[NSApplication sharedApplication] delegate];
     
     ofSetVerticalSync(true);
 	ofDisableDataPath();
     [self setFrameRate:30];
     
-    loader->loadFile(MAIN_IMAGE);
+    NSBundle *myBundle = [NSBundle mainBundle];
+    mainDataPath = std::string([[myBundle resourcePath] UTF8String]);
+    
+    loader->loadFile(ofToDataPath(mainDataPath + MAIN_IMAGE));
+    
     loadPathNextFrame = "";
     
     ofRunApp(new RefreqSynth());
+    
+    
+    [appDelegate setTopPickupButton:0:0];
+    [appDelegate setBottomPickupButton:0:0];
 }
 
 - (void)update
@@ -55,8 +75,22 @@ ofxFft* fft;
 
 -(void)changeTime:(id)sender
 {
-    player->setCurrentTime([sender floatValue]/100.0);
+    player->setCurrentTime([sender floatValue]/TIME_SLIDER_MAX_VALUE);
 }
+
+-(void)setPickupTop:(NSPoint)point
+{
+    float scale = (float)ofGetHeight() / (float)(ofGetHeight()+60);
+    pixelPickup->setTopPickupPoints(point.x, ofGetHeight() - (point.y - 60));
+}
+
+-(void)setPickupBottom:(NSPoint)point
+{
+    float scale = (float)ofGetHeight() / (float)(ofGetHeight()+60);
+    pixelPickup->setBottomPickupPoints(point.x, ofGetHeight() - (point.y - 60));
+}
+
+
 - (void)playPlayer
 {
     if(player->getStatus() == PLAYER_PAUSED){

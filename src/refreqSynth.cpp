@@ -19,6 +19,9 @@ void RefreqSynth::audioRequested 	(float * output, int bufferSize, int nChannels
 
 void RefreqSynth::audioReceived 	(float * output, int bufferSize, int nChannels){
 }
+void RefreqSynth::dragEvent(ofDragInfo info) {
+    cout << info.files[0];
+}
 void RefreqSynth::exit()    {
     ofSoundStreamStop();
 }

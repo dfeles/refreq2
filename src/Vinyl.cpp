@@ -11,6 +11,7 @@
 #include "refreqConstans.h"
 
 Vinyl::Vinyl () {
+    vinylHeight = 660;
 }
 void Vinyl::setImageFromPath(string path) {
     vinylImage.clear();
@@ -48,9 +49,6 @@ void Vinyl::setImage () {
 }
 
 ofColor Vinyl::getPixel(ofPoint point) {
-//    vinylImage.getTextureReference().get
-//    cout << point.y << endl;
-//    cout << vinylImage.getColor((int)(point.x + (int)(offsetX*vinylImage.getWidth())) % (int)vinylImage.getWidth(), point.y).getBrightness() << endl;
     return vinylImage.getColor((int)(point.x + (int)(offsetX*vinylImage.getWidth())) % (int)vinylImage.getWidth(), point.y);
     
 }
@@ -114,4 +112,8 @@ void Vinyl::updateTexture() {
     quad.getTexCoords()[1].set(tx1,ty0);
     quad.getTexCoords()[2].set(tx1,ty1);
     quad.getTexCoords()[3].set(tx0,ty1);
+}
+
+float Vinyl::getVinylHeight(){
+    return vinylHeight;
 }

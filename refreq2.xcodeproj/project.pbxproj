@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		524F6AE318C733BA00F8695B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524F6AE218C733BA00F8695B /* Media.xcassets */; };
 		52ABDAE118C5C3E600F54879 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABDAE018C5C3E600F54879 /* AppDelegate.m */; };
+		52AD05E518CDF37700395463 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7AD8BCD18B57AFA0001746B /* main.jpg */; };
+		52AD05E918CDF45400395463 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52AD05E818CDF45400395463 /* GLUT.framework */; };
 		52BE59D618C5050400FE608F /* audiodecoderbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52BE59CD18C504D300FE608F /* audiodecoderbase.cpp */; };
 		52BE59D718C5050700FE608F /* audiodecodercoreaudio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 52BE59CE18C504D300FE608F /* audiodecodercoreaudio.cpp */; };
 		52F4E8F218C5ED36009616A5 /* ofxCocoaGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52F4E8F018C5EC2F009616A5 /* ofxCocoaGLView.mm */; };
@@ -29,7 +31,6 @@
 		C7F3217E18A2C914008C9295 /* PixelPickup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3217C18A2C914008C9295 /* PixelPickup.cpp */; };
 		C7F3218118A2C990008C9295 /* Synthetizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3217F18A2C990008C9295 /* Synthetizer.cpp */; };
 		C7F3218418A2CA61008C9295 /* Gui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7F3218218A2CA61008C9295 /* Gui.cpp */; };
-		C7F960D418B57C750057243B /* main.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = C7AD8BCD18B57AFA0001746B /* main.jpg */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
 		E45BE97D0E8CC7DD009D7055 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9730E8CC7DD009D7055 /* AudioToolbox.framework */; };
@@ -64,9 +65,9 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "";
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 10;
 			files = (
-				C7F960D418B57C750057243B /* main.jpg in CopyFiles */,
+				52AD05E918CDF45400395463 /* GLUT.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +77,7 @@
 		524F6AE218C733BA00F8695B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../../Media.xcassets; sourceTree = "<group>"; };
 		52ABDADF18C5C3E600F54879 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52ABDAE018C5C3E600F54879 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52AD05E818CDF45400395463 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = requirements/openFrameworks/libs/openFrameworksCompiled/project/osx/../../../glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		52BE59B518C504D300FE608F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		52BE59C718C504D300FE608F /* CADebugMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
 		52BE59C818C504D300FE608F /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				52AD05E818CDF45400395463 /* GLUT.framework */,
 				C7DA746C18BCFE5600430C64 /* rrr.icns */,
 				C7EDE54318A920B500E3C5C1 /* openFrameworksDebug.a */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
@@ -493,7 +496,7 @@
 			buildPhases = (
 				E4B69B580A3A1756003C02F2 /* Sources */,
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
-				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				E4B6FFFD0C3F9AB9008CF71C /* Run Script */,
 				C7F960D318B57C700057243B /* CopyFiles */,
 				52F4E8F418C5F0F3009616A5 /* Resources */,
 			);
@@ -557,24 +560,26 @@
 			files = (
 				524F6AE318C733BA00F8695B /* Media.xcassets in Resources */,
 				52F4E8F518C5F0F9009616A5 /* MainMenu.xib in Resources */,
+				52AD05E518CDF37700395463 /* main.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+		E4B6FFFD0C3F9AB9008CF71C /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f requirements/openFrameworks/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\"; install_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n";
+			shellScript = "cp -f requirements/openFrameworks/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/libfmodex.dylib\";\ninstall_name_tool -change ./libfmodex.dylib @executable_path/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

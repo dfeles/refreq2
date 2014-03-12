@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5053"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -448,6 +448,8 @@
         <customObject id="KNd-7v-aNu" customClass="AppDelegate">
             <connections>
                 <outlet property="ofApp" destination="zWj-Fb-Fbg" id="OsP-1c-f6V"/>
+                <outlet property="pixelPickupBottom" destination="gUN-R5-fAD" id="RzD-fi-Pbb"/>
+                <outlet property="pixelPickupTop" destination="DUy-D6-FzF" id="prZ-9v-i7W"/>
                 <outlet property="playButton" destination="pEk-Gq-Cxt" id="lm3-fE-ZVT"/>
                 <outlet property="timeSlider" destination="a47-mO-1Wr" id="mof-mT-Z6R"/>
                 <outlet property="toolBar" destination="IpX-Vc-7ak" id="uXs-00-yTO"/>
@@ -457,6 +459,9 @@
         <customObject id="sme-IE-f4e" customClass="ControlDelegate">
             <connections>
                 <outlet property="ofApp" destination="zWj-Fb-Fbg" id="1g2-Pp-ocd"/>
+                <outlet property="onTopOfOpenGLView" destination="yzA-FO-54W" id="klH-Pc-JlK"/>
+                <outlet property="pixelPickupBottom" destination="gUN-R5-fAD" id="aRY-Db-ifd"/>
+                <outlet property="pixelPickupTop" destination="DUy-D6-FzF" id="yis-q7-qNq"/>
                 <outlet property="playButton" destination="pEk-Gq-Cxt" id="cD5-zH-J6V"/>
                 <outlet property="timeSlider" destination="a47-mO-1Wr" id="aEf-mu-j6k"/>
                 <outlet property="window" destination="eHF-7s-NRD" id="VuM-k7-AzK"/>
@@ -468,16 +473,37 @@
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="112" y="117" width="1280" height="720"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <value key="minSize" type="size" width="800" height="600"/>
-            <view key="contentView" id="yzA-FO-54W">
+            <view key="contentView" canDrawConcurrently="YES" id="yzA-FO-54W">
                 <rect key="frame" x="0.0" y="0.0" width="1280" height="720"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <openGLView misplaced="YES" depthSize="16bit" numberOfAuxiliaryBuffers="1" useAuxiliaryDepthBufferStencil="NO" useDoubleBufferingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zWj-Fb-Fbg" customClass="Refreq2">
-                        <rect key="frame" x="0.0" y="59" width="1280" height="661"/>
+                    <openGLView misplaced="YES" depthSize="16bit" useAuxiliaryDepthBufferStencil="NO" useDoubleBufferingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zWj-Fb-Fbg" customClass="Refreq2">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </openGLView>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-D6-FzF">
+                        <rect key="frame" x="190" y="709" width="18" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="playerEnd" imagePosition="only" alignment="center" id="EbH-aX-nJD">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="pixelPickupTopAction:" target="sme-IE-f4e" id="esi-9S-jfa"/>
+                        </connections>
+                    </button>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-R5-fAD">
+                        <rect key="frame" x="190" y="49" width="18" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="playerEnd" imagePosition="only" alignment="center" id="i0B-ji-rDg">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="pixelPickupBottomAction:" target="sme-IE-f4e" id="qcc-pn-28g"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="zWj-Fb-Fbg" firstAttribute="leading" secondItem="yzA-FO-54W" secondAttribute="leading" id="DIw-nD-KM0"/>
@@ -487,9 +513,14 @@
                 </constraints>
             </view>
         </window>
+        <drawer trailingOffset="15" id="cC6-ML-Wty">
+            <size key="contentSize" width="100" height="100"/>
+            <size key="maxContentSize" width="10000" height="10000"/>
+        </drawer>
     </objects>
     <resources>
         <image name="playIcon" width="13" height="12"/>
         <image name="playIcon2x" width="25" height="24"/>
+        <image name="playerEnd" width="50" height="50"/>
     </resources>
 </document>

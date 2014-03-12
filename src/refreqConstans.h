@@ -13,7 +13,7 @@
 #define INITIAL_BUFFER_SIZE 512
 
 #define DEFAULT_MIN_HZ 1
-#define DEFAULT_MAX_HZ 22050
+#define DEFAULT_MAX_HZ 11025//22050
 
 #define HEADER_HEIGHT 0
 #define FOOTER_HEIGHT 0
@@ -29,7 +29,7 @@
 
 #define TIME_SLIDER_MAX_VALUE 10000
 
-#define MAIN_IMAGE "refreq2.app/Contents/Resources/main.jpg"
+#define MAIN_IMAGE "/main.jpg"
 
 
 

@@ -20,10 +20,10 @@ void Synthetizer::calculateWave (float * output) {
     for (int i = 0; i < INITIAL_BUFFER_SIZE; i++){
         
         wave = 0.0;
-        for(int n = 0; n < PIXELS_READING; n += 2){
+        for(int n = 0; n < PIXELS_READING; n += 3){
             
             
-            if (pixelPickup->readPixels[n][0]>0.0001) {
+            if (pixelPickup->readPixels[n][0]>0.000001) {
                 
                 int freq = pixelPickup->readPixels[n][1];
                 phases[n] += INITIAL_BUFFER_SIZE/( (float)SAMPLE_RATE/freq);
@@ -35,8 +35,6 @@ void Synthetizer::calculateWave (float * output) {
         }
         
         wave /= 10.0;
-        //if(wave>1.0) wave=1.0;
-        //if(wave<-1.0) wave=-1.0;
 		
         
         output[i*2    ] = wave;

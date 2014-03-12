@@ -23,6 +23,7 @@ class Vinyl {
         void drawVinyl ();
         void resizeWindow();
         void setOffsetX(float _offsetX);
+        float getVinylHeight();
         float w;
     private:
         void setImage ();

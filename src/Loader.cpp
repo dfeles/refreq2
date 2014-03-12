@@ -14,7 +14,6 @@ void Loader( ){
 }
 
 void Loader::loadFile(string path){
-    //gui->drawMessage("Loading");
     ofFile fileToLoad(path);
     string extension = ofToLower(fileToLoad.getExtension());
     if (extension == "mp3" or extension == "wav" or extension == "m4a"){
@@ -24,6 +23,7 @@ void Loader::loadFile(string path){
         player->setStatus(PLAYER_PAUSED);
         loadPicture(fileToLoad);
     }
+    gui->drawMessage("Loading");
 }
 
 void Loader::loadMusic(string path){
@@ -61,6 +61,8 @@ void Loader::loadMusic(string path){
             float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y)/2.0, (float) audio.getSampleRate());
             
             amplitude = log2(amplitude+1);
+//            amplitude *= amplitude;
+            amplitude *= 4;
             int bright = MIN(amplitude * 255.0, 255);
             bright = MAX(bright, 0);
             

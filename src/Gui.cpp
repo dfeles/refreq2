@@ -31,10 +31,11 @@ void Gui::drawGui( ){
 
 void Gui::drawMessage(string message){
     
-    ofSetColor(255,255,255,200);
+    ofSetColor(255,0,0,100);
     ofRect(0, 0, ofGetScreenWidth(), ofGetScreenHeight());
     ofSetColor(0,0,0,200);
     ofDrawBitmapString(message, 50, 56);
+    ofSetColor(255,255,255,255);
     
     cout << message;
 }

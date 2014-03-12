@@ -30,6 +30,7 @@ public:
     void setCurrentTime (float _time);
     void setLength (float _width);
     float stepLength();
+    bool settingUpTime = false;
 private:
     int status = PLAYER_PAUSED;
     float speed = 1;

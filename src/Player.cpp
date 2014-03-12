@@ -16,7 +16,9 @@ void Player::update (){
     setLength(vinyl->w);
     if (status == PLAYER_PLAYING) {
         
-        setCurrentTime (currentTime + speed * stepLength());
+        if(!settingUpTime){
+            setCurrentTime (currentTime + speed * stepLength());
+        }
         vinyl->setOffsetX(currentTime);
         vinyl->drawVinyl();
         pixelPickup->getPixels();
@@ -56,7 +58,6 @@ void Player::setCurrentTime (float _time) {
     if(_time > 1){
         _time = 0;
     }
-    cout << _time << endl;
     currentTime = _time;
 }
 

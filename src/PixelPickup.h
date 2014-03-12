@@ -19,15 +19,20 @@ extern Vinyl* vinyl;
 class PixelPickup {
     public:
         PixelPickup();
-        ofPoint pickupPoint1;
-        ofPoint pickupPoint2;
+    
+        ofPoint pickupPointTop;
+        ofPoint pickupPointBottom;
         void getPixels();
         float readPixels [(int)PIXELS_READING][2];
+        void setTopPickupPoints(float x1, float y1);
+        void setBottomPickupPoints(float x2, float y2);
         void setupHertz (float min, float max, bool logarithmic);
         int getHertzMin ();
         int getHertzMax ();
         int getFreq(int y);
-    private:
+private:
+    float limitY (float y);
+    float limitX (float x);
         float averageB = 0;
         float hertzScale[(int)PIXELS_READING];
     

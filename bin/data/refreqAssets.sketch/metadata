@@ -9,16 +9,9 @@
 	<key>commit</key>
 	<string>4570185e2c9ded14ebc287c802202c126573b527</string>
 	<key>fonts</key>
-	<array>
-		<string>DinHBlackBlack</string>
-		<string>DinHBlackBlack</string>
-		<string>DinHBlackBlack</string>
-		<string>DinHBlackBlack</string>
-		<string>DinHBlackBlack</string>
-		<string>DinHBlackBlack</string>
-	</array>
+	<array/>
 	<key>length</key>
-	<integer>195565</integer>
+	<integer>13701</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

@@ -24,6 +24,8 @@ private:
 	void audioRequested 	(float * input, int bufferSize, int nChannels); /* output method */
 	void audioReceived 	(float * input, int bufferSize, int nChannels); /* input method */
     
+    void dragEvent(ofDragInfo info);
+    
 };
 
 #endif /* defined(__refreq2__refreqSynth__) */
