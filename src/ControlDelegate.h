@@ -14,20 +14,27 @@
     IBOutlet NSSlider *timeSlider;
     IBOutlet ofxCocoaGLView* ofApp;
 	NSButton *playButton;
-	NSButton *pixelPickupTop;
-	NSButton *pixelPickupBottom;
+    
+    NSRect screenSize;
     
 	NSView *onTopOfOpenGLView;
+    NSLayoutConstraint *TopPickerY;
+    NSLayoutConstraint *TopPickerX;
+    NSLayoutConstraint *BottomPickerX;
+    NSLayoutConstraint *BottomPickerY;
 }
 
 - (IBAction) changeTime: (id) sender;
 - (IBAction) play: (id) sender;
 - (IBAction) pixelPickupTopAction: (id) sender;
 - (IBAction) drawRect: (id) sender;
+- (IBAction)importFile:(id)sender;
 
+@property (assign) IBOutlet NSLayoutConstraint *TopPickerY;
+@property (assign) IBOutlet NSLayoutConstraint *TopPickerX;
+@property (assign) IBOutlet NSLayoutConstraint *BottomPickerX;
+@property (assign) IBOutlet NSLayoutConstraint *BottomPickerY;
 @property (assign) IBOutlet NSButton *playButton;
-@property (assign) IBOutlet NSButton *pixelPickupTop;
-@property (assign) IBOutlet NSButton *pixelPickupBottom;
 
 @property (assign) IBOutlet NSView *onTopOfOpenGLView;
 

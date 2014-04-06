@@ -40,6 +40,7 @@
 - (void)setPickupTop:(NSPoint)point;
 - (void)setPickupBottom:(NSPoint)point;
 - (void)playPlayer;
+- (void)importFile;
 
 
 

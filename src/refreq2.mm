@@ -14,36 +14,16 @@ ofxFft* fft;
 
 - (void)setup
 {
-    
-    NSRect backingBounds = [self convertRectToBacking:[self bounds]];
-    
-    GLsizei backingPixelWidth  = (GLsizei)(backingBounds.size.width),
-    backingPixelHeight = (GLsizei)(backingBounds.size.height);
-    
-    // Set viewport
-    glViewport(0, 0, backingPixelWidth, backingPixelHeight);
-    
-    //    [[self layer] setContentsScale:[[self window] backingScaleFactor]];
-    
-    
     appDelegate = [[NSApplication sharedApplication] delegate];
     
     ofSetVerticalSync(true);
 	ofDisableDataPath();
-    [self setFrameRate:30];
+    [self setFrameRate:FRAME_PER_SECOND];
     
-    NSBundle *myBundle = [NSBundle mainBundle];
-    mainDataPath = std::string([[myBundle resourcePath] UTF8String]);
-    
-    loader->loadFile(ofToDataPath(mainDataPath + MAIN_IMAGE));
-    
+    [self loadMainImage];
     loadPathNextFrame = "";
     
     ofRunApp(new RefreqSynth());
-    
-    
-    [appDelegate setTopPickupButton:0:0];
-    [appDelegate setBottomPickupButton:0:0];
 }
 
 - (void)update
@@ -52,10 +32,7 @@ ofxFft* fft;
 
 - (void)draw
 {
-    if(loadPathNextFrame != ""){
-        loader->loadFile(loadPathNextFrame);
-        loadPathNextFrame = "";
-    }
+    [self loadFileIfNeeded];
     
     player->update();
     if(player->getStatus() == PLAYER_PLAYING){
@@ -70,7 +47,22 @@ ofxFft* fft;
 - (void)exit
 {
 	ofSoundStreamStop();
-    cout << "Iexit";
+}
+
+- (void)loadMainImage
+{
+    NSBundle *myBundle = [NSBundle mainBundle];
+    mainDataPath = std::string([[myBundle resourcePath] UTF8String]);
+    
+    loader->loadFile(ofToDataPath(mainDataPath + MAIN_IMAGE));
+}
+
+- (void)loadFileIfNeeded
+{
+    if(loadPathNextFrame != ""){
+        loader->loadFile(loadPathNextFrame);
+        loadPathNextFrame = "";
+    }
 }
 
 -(void)changeTime:(id)sender
@@ -101,6 +93,12 @@ ofxFft* fft;
         player->setStatus(PLAYER_PAUSED);
         [appDelegate setUpPlayButton:false];
     }
+}
+
+
+- (void)importFile
+{
+    loadPathNextFrame = gui->getFilePath();
 }
 
 - (void)keyPressed:(int)key

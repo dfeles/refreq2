@@ -7,6 +7,10 @@
 	NSButton *playButton;
 	NSButton *pixelPickupTop;
 	NSButton *pixelPickupBottom;
+    NSSplitView *splitView;
+    NSView *settingsSidebar;
+    NSView *frequencySideBar;
+    NSTextField *MaxHz;
     NSSlider *timeSlider;
 }
 
@@ -16,14 +20,16 @@
 @property (assign) IBOutlet NSButton *playButton;
 @property (assign) IBOutlet NSButton *pixelPickupTop;
 @property (assign) IBOutlet NSButton *pixelPickupBottom;
+@property (assign) IBOutlet NSSplitView *splitView;
+@property (assign) IBOutlet NSView *settingsSidebar;
+@property (assign) IBOutlet NSView *frequencySideBar;
+@property (assign) IBOutlet NSTextField *MaxHz;
 
 @property (assign) IBOutlet NSSlider *timeSlider;
 
 -(IBAction)changeColor:(id)sender;
 -(void)setUpPlayButton:(BOOL)playing;
 -(void)setUpTimeline:(int)time;
-
--(void)setTopPickupButton:(int)x :(int)y;
--(void)setBottomPickupButton:(int)x :(int)y;
+- (IBAction)openSettingsSidebar:(id)sender;
 
 @end

@@ -62,7 +62,7 @@ void Loader::loadMusic(string path){
             
             amplitude = log2(amplitude+1);
 //            amplitude *= amplitude;
-            amplitude *= 4;
+            amplitude *= 10;
             int bright = MIN(amplitude * 255.0, 255);
             bright = MAX(bright, 0);
             

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521B29A218F0E1B1003553F5 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 521B29A118F0E1B1003553F5 /* Credits.html */; };
 		524F6AE318C733BA00F8695B /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524F6AE218C733BA00F8695B /* Media.xcassets */; };
 		52ABDAE118C5C3E600F54879 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52ABDAE018C5C3E600F54879 /* AppDelegate.m */; };
 		52AD05E518CDF37700395463 /* main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7AD8BCD18B57AFA0001746B /* main.jpg */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		521B29A118F0E1B1003553F5 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		524F6AE218C733BA00F8695B /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = ../../Media.xcassets; sourceTree = "<group>"; };
 		52ABDADF18C5C3E600F54879 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52ABDAE018C5C3E600F54879 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,7 +94,7 @@
 		52F4E8ED18C5EC2F009616A5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		52F4E8EF18C5EC2F009616A5 /* ofxCocoaGLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ofxCocoaGLView.h; path = requirements/ofxCocoaGLView/src/ofxCocoaGLView.h; sourceTree = SOURCE_ROOT; };
 		52F4E8F018C5EC2F009616A5 /* ofxCocoaGLView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = ofxCocoaGLView.mm; path = requirements/ofxCocoaGLView/src/ofxCocoaGLView.mm; sourceTree = SOURCE_ROOT; };
-		52F4E8F318C5F0B0009616A5 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		52F4E8F318C5F0B0009616A5 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MainMenu.xib; path = ../../src/MainMenu.xib; sourceTree = "<group>"; };
 		52F4E8F618C5FACD009616A5 /* refreqSynth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = refreqSynth.cpp; sourceTree = "<group>"; };
 		52F4E8F718C5FACD009616A5 /* refreqSynth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = refreqSynth.h; sourceTree = "<group>"; };
 		52FCB77318C5E29800DB745E /* ControlDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlDelegate.h; sourceTree = "<group>"; };
@@ -318,6 +320,8 @@
 		C7AD8BC818B57ADC0001746B /* data */ = {
 			isa = PBXGroup;
 			children = (
+				521B29A118F0E1B1003553F5 /* Credits.html */,
+				52F4E8F318C5F0B0009616A5 /* MainMenu.xib */,
 				524F6AE218C733BA00F8695B /* Media.xcassets */,
 				C7AD8BCD18B57AFA0001746B /* main.jpg */,
 			);
@@ -451,7 +455,6 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				52F4E8F318C5F0B0009616A5 /* MainMenu.xib */,
 				C7EF20F618B2ABB60016EE43 /* refreqConstans.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.m */,
 				52FCB77418C5E29800DB745E /* ControlDelegate.mm */,
@@ -559,6 +562,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				524F6AE318C733BA00F8695B /* Media.xcassets in Resources */,
+				521B29A218F0E1B1003553F5 /* Credits.html in Resources */,
 				52F4E8F518C5F0F9009616A5 /* MainMenu.xib in Resources */,
 				52AD05E518CDF37700395463 /* main.jpg in Resources */,
 			);

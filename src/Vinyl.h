@@ -28,6 +28,7 @@ class Vinyl {
     private:
         void setImage ();
         void updateTexture();
+        float scaleX = 1;
     
         float vinylHeight;
         float h;
