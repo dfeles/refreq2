@@ -15,7 +15,6 @@
 @synthesize BottomPickerX;
 @synthesize BottomPickerY;
 @synthesize playButton;
-@synthesize onTopOfOpenGLView;
 
 - (IBAction) changeTime: (id) sender {
     

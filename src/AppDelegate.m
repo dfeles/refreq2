@@ -79,7 +79,7 @@
     
     NSView *left  = [[[self splitView] subviews] objectAtIndex:0];
     NSRect leftFrame = [left frame];
-    NSRect overallFrame = [window frame]; //???
+    NSRect overallFrame = [window frame];
     [left setFrameSize:NSMakeSize(overallFrame.size.width,leftFrame.size.height)];
     [self collapseRightView];
 }
@@ -98,7 +98,7 @@
     NSView *right = [[[self splitView] subviews] objectAtIndex:1];
     NSView *left  = [[[self splitView] subviews] objectAtIndex:0];
     NSRect leftFrame = [left frame];
-    NSRect overallFrame = [window frame]; //???
+    NSRect overallFrame = [window frame];
     [right setHidden:YES];
     [left setFrameSize:NSMakeSize(overallFrame.size.width,leftFrame.size.height)];
     [[self splitView] display];
@@ -112,7 +112,6 @@
     
 	CGFloat dividerThickness = [[self splitView] dividerThickness];
 	
-    // get the different frames
 	NSRect leftFrame = [left frame];
 	NSRect rightFrame = [right frame];
     

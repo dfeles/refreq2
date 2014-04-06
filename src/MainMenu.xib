@@ -269,7 +269,6 @@
                 <outlet property="TopPickerX" destination="3Lr-Eg-9Yv" id="WN7-7f-hyK"/>
                 <outlet property="TopPickerY" destination="1hy-ih-VKJ" id="pBn-Am-aeV"/>
                 <outlet property="ofApp" destination="zWj-Fb-Fbg" id="1g2-Pp-ocd"/>
-                <outlet property="onTopOfOpenGLView" destination="yzA-FO-54W" id="klH-Pc-JlK"/>
                 <outlet property="pixelPickupBottom" destination="gUN-R5-fAD" id="aRY-Db-ifd"/>
                 <outlet property="pixelPickupTop" destination="DUy-D6-FzF" id="yis-q7-qNq"/>
                 <outlet property="playButton" destination="pEk-Gq-Cxt" id="cD5-zH-J6V"/>

@@ -17,7 +17,6 @@
     
     NSRect screenSize;
     
-	NSView *onTopOfOpenGLView;
     NSLayoutConstraint *TopPickerY;
     NSLayoutConstraint *TopPickerX;
     NSLayoutConstraint *BottomPickerX;
@@ -35,7 +34,5 @@
 @property (assign) IBOutlet NSLayoutConstraint *BottomPickerX;
 @property (assign) IBOutlet NSLayoutConstraint *BottomPickerY;
 @property (assign) IBOutlet NSButton *playButton;
-
-@property (assign) IBOutlet NSView *onTopOfOpenGLView;
 
 @end
