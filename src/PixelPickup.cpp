@@ -24,7 +24,10 @@ PixelPickup::PixelPickup(){
 
 void PixelPickup::getPixels() {
     float _s = (float)(ofGetHeight()-HEADER_HEIGHT-FOOTER_HEIGHT)/(float)PIXELS_READING;
+    ofEnableAlphaBlending();
+    ofSetColor(0,0,0,50);
     ofLine(pickupPointTop.x * _s, pickupPointTop.y * _s + HEADER_HEIGHT, pickupPointBottom.x * _s, pickupPointBottom.y * _s + HEADER_HEIGHT);
+    ofDisableAlphaBlending();
     for(int i=0; i<PIXELS_READING; i++){
         float _x = pickupPointTop.x + (pickupPointBottom.x - pickupPointTop.x) / PIXELS_READING * (float) i;
         
@@ -32,16 +35,15 @@ void PixelPickup::getPixels() {
         
         ofPoint pointToGet = *new ofVec2f((int)_x,(int)_y);
         
-        readPixels[i][0] = vinyl->getPixel(pointToGet).getBrightness()/255.0;
+        readPixels[i][0] = 1-vinyl->getPixel(pointToGet).getBrightness()/254.0;
         readPixels[i][1] = getFreq(pointToGet.y);
         
-        
-        if(i%2 == 0){
-            ofEnableBlendMode(OF_BLENDMODE_MULTIPLY);
-            ofSetColor(readPixels[i-1][0]*255.0, readPixels[i-1][0]*255.0, readPixels[i-1][0]*255.0,readPixels[i-1][0]*10.0);
-            ofCircle(_x*_s, _y*_s+HEADER_HEIGHT, readPixels[i-1][0]*20.0);
+        //if(i%2 == 0){
+            ofEnableBlendMode(OF_BLENDMODE_SUBTRACT);
+            ofSetColor(255-readPixels[i-1][0]*254.0, 255-readPixels[i-1][0]*254.0, 255-readPixels[i-1][0]*254.0,(1-readPixels[i-1][0])*30.0);
+            ofCircle(_x*_s, _y*_s+HEADER_HEIGHT, readPixels[i-1][0]*50.0);
             ofDisableBlendMode();
-        }
+        //}
     }
 }
 
@@ -77,8 +79,11 @@ float PixelPickup::limitX (float x) {
 
 void PixelPickup::setupHertz (float min, float max, bool logarithmic) {
     if (logarithmic){
-        for(int n = 1;n<PIXELS_READING+1;n++){
-            hertzScale[n] = log((max-min) / PIXELS_READING) * n;
+        for(int n = PIXELS_READING;n>0; n--){
+            
+            hertzScale[(int)PIXELS_READING+1-n] = (log(n) - log(1)) / ((log(PIXELS_READING)) - log(1)) * (min - max) + max;
+            
+            //hertzScale[n] = log((max-min) / PIXELS_READING * n +1);
         }
     }else{
         for(int n = 1;n<PIXELS_READING+1;n++){

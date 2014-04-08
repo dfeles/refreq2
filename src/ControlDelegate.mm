@@ -20,8 +20,6 @@
     
     [ofApp changeTime:sender];
     
-    NSString *digit = [sender stringValue];
-    
 }
 
 - (IBAction) play: (id) sender {
@@ -57,5 +55,10 @@
 
 - (IBAction)importFile:(id)sender {
     [ofApp importFile];
+}
+
+- (IBAction)changeVolume:(id)sender {
+
+    [ofApp setVolume2:sender];
 }
 @end

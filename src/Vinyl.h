@@ -17,6 +17,7 @@ class Vinyl {
         Vinyl();
         void setImageFromPath(string path);
         void setImageFromSpectrum(ofImage image);
+        void saveVinylImage(string path);
     
     
         ofColor getPixel (ofPoint point);

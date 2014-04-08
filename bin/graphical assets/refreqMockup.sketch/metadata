@@ -13,9 +13,15 @@
 		<string>LucidaGrande</string>
 		<string>LucidaGrande</string>
 		<string>LucidaGrande</string>
+		<string>FontAwesome</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
 	</array>
 	<key>length</key>
-	<integer>126473</integer>
+	<integer>153516</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

@@ -12,6 +12,9 @@
     NSView *frequencySideBar;
     NSTextField *MaxHz;
     NSSlider *timeSlider;
+    NSSlider *changeVolume;
+    
+    
 }
 
 
@@ -26,6 +29,7 @@
 @property (assign) IBOutlet NSTextField *MaxHz;
 
 @property (assign) IBOutlet NSSlider *timeSlider;
+@property (assign) IBOutlet NSSlider *changeVolume;
 
 -(IBAction)changeColor:(id)sender;
 -(void)setUpPlayButton:(BOOL)playing;

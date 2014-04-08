@@ -15,7 +15,7 @@ ofxFft* fft;
 - (void)setup
 {
     appDelegate = [[NSApplication sharedApplication] delegate];
-    
+    ofEnableSmoothing;
     ofSetVerticalSync(true);
 	ofDisableDataPath();
     [self setFrameRate:FRAME_PER_SECOND];
@@ -62,6 +62,8 @@ ofxFft* fft;
     if(loadPathNextFrame != ""){
         loader->loadFile(loadPathNextFrame);
         loadPathNextFrame = "";
+        
+        vinyl->saveVinylImage("../../../a.png");
     }
 }
 
@@ -70,16 +72,21 @@ ofxFft* fft;
     player->setCurrentTime([sender floatValue]/TIME_SLIDER_MAX_VALUE);
 }
 
+-(void)setVolume2:(id)sender
+{
+    synthetizer->setVolume([sender floatValue]);
+}
+
 -(void)setPickupTop:(NSPoint)point
 {
-    float scale = (float)ofGetHeight() / (float)(ofGetHeight()+60);
-    pixelPickup->setTopPickupPoints(point.x, ofGetHeight() - (point.y - 60));
+    float scale = (float)ofGetHeight() / (float)(ofGetHeight());
+    pixelPickup->setTopPickupPoints(point.x, ofGetHeight() - (point.y));
 }
 
 -(void)setPickupBottom:(NSPoint)point
 {
-    float scale = (float)ofGetHeight() / (float)(ofGetHeight()+60);
-    pixelPickup->setBottomPickupPoints(point.x, ofGetHeight() - (point.y - 60));
+    float scale = (float)ofGetHeight() / (float)(ofGetHeight());
+    pixelPickup->setBottomPickupPoints(point.x, ofGetHeight() - (point.y));
 }
 
 
@@ -103,6 +110,9 @@ ofxFft* fft;
 
 - (void)keyPressed:(int)key
 {
+	if(key == 105){
+        loadPathNextFrame = gui->getFilePath();
+    }
 	if(key == 111){
         loadPathNextFrame = gui->getFilePath();
     } else if (key == SPACE_KEY){

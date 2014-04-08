@@ -1,5 +1,12 @@
 #import "AppDelegate.h"
 #import "refreqConstans.h"
+#import <objc/runtime.h>
+
+
+@interface AppDelegate(ShutUpXcode)
+- (float)roundedCornerRadius;
+- (void)drawRectOriginal:(NSRect)rect;
+@end
 
 @implementation AppDelegate
 
@@ -7,12 +14,14 @@
 @synthesize toolBar;
 @synthesize playButton;
 @synthesize timeSlider;
+@synthesize changeVolume;
 @synthesize pixelPickupTop;
 @synthesize pixelPickupBottom;
 @synthesize splitView;
 @synthesize settingsSidebar;
 @synthesize frequencySideBar;
 @synthesize MaxHz;
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -24,7 +33,52 @@
     
     [timeSlider setMaxValue:TIME_SLIDER_MAX_VALUE];
     [timeSlider sendActionOn:(NSLeftMouseDraggedMask | NSLeftMouseDownMask)];
+    
+    [changeVolume sendActionOn:(NSLeftMouseDraggedMask | NSLeftMouseDownMask)];
+    
    
+	
+	// Get window's frame view class
+	id class = [[[window contentView] superview] class];
+    
+	
+	// Exchange draw rect
+	Method m0 = class_getInstanceMethod([self class], @selector(drawRect:));
+	class_addMethod(class, @selector(drawRectOriginal:), method_getImplementation(m0), method_getTypeEncoding(m0));
+	
+	Method m1 = class_getInstanceMethod(class, @selector(drawRect:));
+	Method m2 = class_getInstanceMethod(class, @selector(drawRectOriginal:));
+	
+	method_exchangeImplementations(m1, m2);
+   
+}
+
+
+- (void)drawRect:(NSRect)rect
+{
+	// Call original drawing method
+	[self drawRectOriginal:rect];
+    
+	//
+	// Build clipping path : intersection of frame clip (bezier path with rounded corners) and rect argument
+	//
+    if (![[[self window] title]  isEqual: @"refreq2"]){
+        return;
+    };
+	NSRect windowRect = [[self window] frame];
+	windowRect.origin = NSMakePoint(0, 0);
+    
+	float cornerRadius = 3;
+	[[NSBezierPath bezierPathWithRoundedRect:windowRect xRadius:cornerRadius yRadius:cornerRadius] addClip];
+	[[NSBezierPath bezierPathWithRect:rect] addClip];
+    
+	//
+	// Draw a background color on top of everything
+	//
+	CGContextRef context = [[NSGraphicsContext currentContext]graphicsPort];
+	CGContextSetBlendMode(context, kCGBlendModeNormal);
+	[[NSColor colorWithCalibratedRed:0.18 green:0.18 blue:0.18 alpha:1] set];
+	[[NSBezierPath bezierPathWithRect:rect] fill];
 }
 
 - (void)dealloc
@@ -64,7 +118,7 @@
 - (void)setupFrequencySidebar
 {
     [frequencySideBar setWantsLayer:YES];
-    frequencySideBar.layer.backgroundColor = CGColorCreateGenericRGB(.2, .2, .2, 0.6);
+    frequencySideBar.layer.backgroundColor = CGColorCreateGenericRGB(.8, .8, .8, 0.6);
 }
 
 - (void)setupSettingsSidebar

@@ -34,7 +34,7 @@ void Synthetizer::calculateWave (float * output) {
             }
         }
         
-        wave /= 10.0;
+        wave /= 10.0 / volume;
 		
         
         output[i*2    ] = wave;
@@ -43,6 +43,12 @@ void Synthetizer::calculateWave (float * output) {
     }
     
 }
+
+void Synthetizer::setVolume(float _volume)
+{
+    volume = _volume;
+};
+
 void Synthetizer::reset() {
     for (int i=0;i < INITIAL_BUFFER_SIZE; i++){
         soundWave[i] = 0;

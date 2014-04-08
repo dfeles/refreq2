@@ -41,6 +41,7 @@
 - (void)setPickupBottom:(NSPoint)point;
 - (void)playPlayer;
 - (void)importFile;
+- (void)setVolume2:(id)sender;
 
 
 

@@ -44,7 +44,7 @@ void Loader::loadMusic(string path){
     
     int samplesPerFrame = audio.getNumSamples() / frames;
     
-    fft = ofxFft::create(2500, OF_FFT_WINDOW_SINE, OF_FFT_BASIC);
+    fft = ofxFft::create(2900, OF_FFT_WINDOW_SINE, OF_FFT_FFTW);
     
     createdSpectrum.clear();
     createdSpectrum.allocate(frames, PIXELS_READING, OF_IMAGE_COLOR);
@@ -63,17 +63,18 @@ void Loader::loadMusic(string path){
             amplitude = log2(amplitude+1);
 //            amplitude *= amplitude;
             amplitude *= 3;
-            int bright = MIN(amplitude * 255.0, 255);
-            bright = MAX(bright, 0);
+            int bright = MAX(MIN(amplitude * 254.0, 254), 0);
+            
+         //   bright = 254;
             
             actualColor.set(bright, bright, bright);
             
 //            int i = y * frames * 3 + x * 3;
             int index = (x + y*frames)*3;
             
-            createdSpectrum.getPixelsRef()[index]   = amplitude * 255.0;
-            createdSpectrum.getPixelsRef()[index+1] = amplitude * 255.0;
-            createdSpectrum.getPixelsRef()[index+2] = amplitude * 255.0;
+            createdSpectrum.getPixelsRef()[index]   = 255-bright;
+            createdSpectrum.getPixelsRef()[index+1] = 255-bright;
+            createdSpectrum.getPixelsRef()[index+2] = 255-bright;
             
         }
     }

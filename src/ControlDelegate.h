@@ -26,8 +26,8 @@
 - (IBAction) changeTime: (id) sender;
 - (IBAction) play: (id) sender;
 - (IBAction) pixelPickupTopAction: (id) sender;
-- (IBAction) drawRect: (id) sender;
 - (IBAction)importFile:(id)sender;
+- (IBAction)changeVolume:(id)sender;
 
 @property (assign) IBOutlet NSLayoutConstraint *TopPickerY;
 @property (assign) IBOutlet NSLayoutConstraint *TopPickerX;

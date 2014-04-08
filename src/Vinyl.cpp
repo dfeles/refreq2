@@ -48,6 +48,10 @@ void Vinyl::setImage () {
     }
 }
 
+void Vinyl::saveVinylImage(string path) {
+    vinylImage.saveImage(path);
+}
+
 ofColor Vinyl::getPixel(ofPoint point) {
     return vinylImage.getColor((int)(point.x + (int)(offsetX*vinylImage.getWidth())) % (int)vinylImage.getWidth(), point.y);
     
