@@ -30,6 +30,7 @@ class PixelPickup {
         int getHertzMin ();
         int getHertzMax ();
         int getFreq(int y);
+        float echo = .5;
 private:
     float limitY (float y);
     float limitX (float x);

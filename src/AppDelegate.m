@@ -15,6 +15,7 @@
 @synthesize playButton;
 @synthesize timeSlider;
 @synthesize changeVolume;
+@synthesize changeEcho;
 @synthesize pixelPickupTop;
 @synthesize pixelPickupBottom;
 @synthesize splitView;
@@ -35,6 +36,7 @@
     [timeSlider sendActionOn:(NSLeftMouseDraggedMask | NSLeftMouseDownMask)];
     
     [changeVolume sendActionOn:(NSLeftMouseDraggedMask | NSLeftMouseDownMask)];
+    [changeEcho sendActionOn:(NSLeftMouseDraggedMask | NSLeftMouseDownMask)];
     
    
 	
@@ -124,7 +126,7 @@
 - (void)setupSettingsSidebar
 {
     [settingsSidebar setWantsLayer:YES];
-    settingsSidebar.layer.backgroundColor = CGColorCreateGenericRGB(.7, .7, .7, 0);
+    settingsSidebar.layer.backgroundColor = CGColorCreateGenericRGB(.9, .9, .9, 1);
     
 }
 

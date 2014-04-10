@@ -1,4 +1,4 @@
-//
+ //
 //  Synthetizer.cpp
 //  refreq2
 //
@@ -23,10 +23,10 @@ void Synthetizer::calculateWave (float * output) {
         for(int n = 0; n < PIXELS_READING; n += 3){
             
             
-            if (pixelPickup->readPixels[n][0]>0.000001) {
+            if (pixelPickup->readPixels[n][0]>0.0001) {
                 
                 int freq = pixelPickup->readPixels[n][1];
-                phases[n] += INITIAL_BUFFER_SIZE/( (float)SAMPLE_RATE/freq);
+                phases[n] += INITIAL_BUFFER_SIZE/( (float)SAMPLE_RATE/freq)*2;
                 if ( phases[n] > 514 ) phases[n] -= 514;
                 
                 wave += sinesBuffer[(int) phases[n]] * pixelPickup->readPixels[n][0];

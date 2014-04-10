@@ -149,14 +149,13 @@
                         </sliderCell>
                     </slider>
                 </toolbarItem>
-                <toolbarItem implicitItemIdentifier="85C9E2FE-0BC8-4EDE-87E5-3902BB4B7CA2" label="Custom View" paletteLabel="Custom View" image="add" id="bKa-3F-1Xr">
-                    <nil key="toolTip"/>
-                    <size key="minSize" width="30" height="25"/>
-                    <size key="maxSize" width="88" height="32"/>
+                <toolbarItem implicitItemIdentifier="85C9E2FE-0BC8-4EDE-87E5-3902BB4B7CA2" label="Custom View" paletteLabel="Custom View" toolTip="Import image or sound" image="add" id="bKa-3F-1Xr">
+                    <size key="minSize" width="30" height="30"/>
+                    <size key="maxSize" width="30" height="30"/>
                     <button key="view" id="MXy-Ie-yYE">
-                        <rect key="frame" x="4" y="14" width="70" height="25"/>
+                        <rect key="frame" x="24" y="14" width="30" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="add" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="f9M-YF-lJM">
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="add" imagePosition="below" alignment="center" imageScaling="proportionallyDown" inset="2" id="f9M-YF-lJM">
                             <behavior key="behavior" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                             <connections>
@@ -165,14 +164,13 @@
                         </buttonCell>
                     </button>
                 </toolbarItem>
-                <toolbarItem implicitItemIdentifier="3ADD3C2D-B24D-4791-92F8-D4C760A7C02A" label="Custom View" paletteLabel="Custom View" image="playIcon" id="3HQ-79-ULi">
-                    <nil key="toolTip"/>
+                <toolbarItem implicitItemIdentifier="3ADD3C2D-B24D-4791-92F8-D4C760A7C02A" label="Custom View" paletteLabel="Custom View" toolTip="Play" image="playIcon" id="3HQ-79-ULi">
                     <size key="minSize" width="25" height="25"/>
                     <size key="maxSize" width="25" height="25"/>
                     <button key="view" id="pEk-Gq-Cxt">
                         <rect key="frame" x="26" y="14" width="25" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="playIcon" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="azX-Pm-pll">
+                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="playIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="azX-Pm-pll">
                             <behavior key="behavior" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -181,8 +179,7 @@
                         </connections>
                     </button>
                 </toolbarItem>
-                <toolbarItem implicitItemIdentifier="E38AEB51-B236-4FC6-A838-75CFD3F45E0C" label="Custom View" paletteLabel="Custom View" image="AppIcon" id="hcg-Yj-OFq">
-                    <nil key="toolTip"/>
+                <toolbarItem implicitItemIdentifier="E38AEB51-B236-4FC6-A838-75CFD3F45E0C" label="Custom View" paletteLabel="Custom View" toolTip="About" image="AppIcon" id="hcg-Yj-OFq">
                     <size key="minSize" width="25" height="30"/>
                     <size key="maxSize" width="35" height="30"/>
                     <button key="view" id="38p-8n-99S">
@@ -197,7 +194,6 @@
                         </connections>
                     </button>
                 </toolbarItem>
-                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="dDu-fl-n7u"/>
                 <toolbarItem implicitItemIdentifier="FE9A9B0A-E75C-4557-9444-C6072C3F91F0" label="Custom View" paletteLabel="Custom View" id="PqG-yf-fNz">
                     <nil key="toolTip"/>
                     <size key="minSize" width="1" height="50"/>
@@ -211,8 +207,7 @@
                         </buttonCell>
                     </button>
                 </toolbarItem>
-                <toolbarItem implicitItemIdentifier="B746D2A4-00B8-41CF-9393-F5A4A72E0090" label="Custom View" paletteLabel="Custom View" image="settings" id="uPJ-vc-xol">
-                    <nil key="toolTip"/>
+                <toolbarItem implicitItemIdentifier="B746D2A4-00B8-41CF-9393-F5A4A72E0090" label="Custom View" paletteLabel="Custom View" toolTip="Settings" image="settings" id="uPJ-vc-xol">
                     <size key="minSize" width="30" height="25"/>
                     <size key="maxSize" width="70" height="25"/>
                     <button key="view" id="FxH-sm-ZMW">
@@ -228,15 +223,33 @@
                     </button>
                 </toolbarItem>
                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="BxE-9s-GNB"/>
+                <toolbarItem implicitItemIdentifier="B1BFA476-C2A0-4F30-8AB3-BFF4184AF950" label="Export image" paletteLabel="Export image" toolTip="Export image" image="export" id="SM0-Di-3Tk">
+                    <size key="minSize" width="30" height="25"/>
+                    <size key="maxSize" width="88" height="32"/>
+                    <button key="view" id="7iY-Qa-HmB">
+                        <rect key="frame" x="4" y="14" width="70" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="export" imagePosition="overlaps" alignment="center" toolTip="Export image" imageScaling="proportionallyUpOrDown" inset="2" id="sBV-N4-cXA">
+                            <behavior key="behavior" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="exportImage:" target="sme-IE-f4e" id="0hx-67-p0G"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                </toolbarItem>
+                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="dDu-fl-n7u"/>
             </allowedToolbarItems>
             <defaultToolbarItems>
                 <toolbarItem reference="hcg-Yj-OFq"/>
                 <toolbarItem reference="dDu-fl-n7u"/>
                 <toolbarItem reference="bKa-3F-1Xr"/>
+                <toolbarItem reference="dDu-fl-n7u"/>
                 <toolbarItem reference="3HQ-79-ULi"/>
                 <toolbarItem reference="dDu-fl-n7u"/>
                 <toolbarItem reference="mZe-Qf-Aqs"/>
-                <toolbarItem reference="BxE-9s-GNB"/>
+                <toolbarItem reference="SM0-Di-3Tk"/>
+                <toolbarItem reference="dDu-fl-n7u"/>
                 <toolbarItem reference="uPJ-vc-xol"/>
             </defaultToolbarItems>
         </toolbar>
@@ -248,6 +261,7 @@
                 <outlet property="SettingsSidebar" destination="LTE-69-Ij0" id="sVI-mz-6IT"/>
                 <outlet property="SplitView" destination="lKm-lu-9Tn" id="r4t-9q-dbn"/>
                 <outlet property="TopPickerY" destination="1hy-ih-VKJ" id="vGU-T8-iR4"/>
+                <outlet property="changeEcho" destination="xsy-9p-joU" id="nDF-Xb-h1M"/>
                 <outlet property="changeVolume" destination="A0A-FU-twH" id="aem-Dy-VY6"/>
                 <outlet property="ofApp" destination="zWj-Fb-Fbg" id="OsP-1c-f6V"/>
                 <outlet property="pixelPickupBottom" destination="gUN-R5-fAD" id="RzD-fi-Pbb"/>
@@ -381,14 +395,23 @@
                                         <tabViewItems>
                                             <tabViewItem label="Image" identifier="1" id="GCt-JN-3gS">
                                                 <view key="view" id="aRB-xs-RJ4">
-                                                    <rect key="frame" x="10" y="33" width="202" height="756"/>
+                                                    <rect key="frame" x="10" y="33" width="197" height="670"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wcp-L2-TlK">
-                                                            <rect key="frame" x="9" y="729" width="119" height="17"/>
+                                                            <rect key="frame" x="23" y="607" width="156" height="35"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Change the image" id="qXy-OZ-ikU">
-                                                                <font key="font" metaFont="system"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Here will be dragons" id="qXy-OZ-ikU">
+                                                                <font key="font" size="18" name="Garamond"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                        </textField>
+                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XgV-ft-cCa">
+                                                            <rect key="frame" x="87" y="551" width="28" height="48"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="🌄" id="ddJ-Vd-N4t">
+                                                                <font key="font" size="40" name="Entypo"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
@@ -398,28 +421,28 @@
                                             </tabViewItem>
                                             <tabViewItem label="Sound" identifier="2" id="OTK-Uf-FRr">
                                                 <view key="view" id="emO-8V-PBN">
-                                                    <rect key="frame" x="10" y="33" width="202" height="756"/>
+                                                    <rect key="frame" x="10" y="33" width="197" height="670"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-Ln-KNo">
-                                                            <rect key="frame" x="5" y="720" width="25" height="25"/>
+                                                            <rect key="frame" x="5" y="634" width="25" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="ilv-gB-dow">
                                                                 <font key="font" size="20" name="FontAwesome"/>
-                                                                <color key="textColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="textColor" red="0.22638313137755106" green="0.22638313137755106" blue="0.22638313137755106" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                         </textField>
                                                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0A-FU-twH">
-                                                            <rect key="frame" x="36" y="723" width="149" height="17"/>
+                                                            <rect key="frame" x="36" y="638" width="155" height="15"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <sliderCell key="cell" controlSize="mini" alignment="left" maxValue="10" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="Ulh-Rx-e1b"/>
+                                                            <sliderCell key="cell" controlSize="mini" state="on" alignment="left" maxValue="10" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="Ulh-Rx-e1b"/>
                                                             <connections>
                                                                 <action selector="changeVolume:" target="sme-IE-f4e" id="1lv-ek-H8D"/>
                                                             </connections>
                                                         </slider>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCD-J8-dvk">
-                                                            <rect key="frame" x="9" y="665" width="34" height="17"/>
+                                                            <rect key="frame" x="9" y="579" width="34" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Echo" id="a6r-7h-w4j">
                                                                 <font key="font" metaFont="system"/>
@@ -428,9 +451,12 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsy-9p-joU">
-                                                            <rect key="frame" x="9" y="639" width="184" height="20"/>
+                                                            <rect key="frame" x="11" y="554" width="180" height="15"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <sliderCell key="cell" state="on" alignment="left" maxValue="100" tickMarkPosition="above" sliderType="linear" id="749-iV-3aH"/>
+                                                            <sliderCell key="cell" controlSize="mini" state="on" alignment="left" maxValue="30" tickMarkPosition="above" sliderType="linear" id="749-iV-3aH"/>
+                                                            <connections>
+                                                                <action selector="changeEcho:" target="sme-IE-f4e" id="JYX-yn-osT"/>
+                                                            </connections>
                                                         </slider>
                                                     </subviews>
                                                 </view>
@@ -471,6 +497,7 @@
     <resources>
         <image name="AppIcon" width="512" height="512"/>
         <image name="add" width="25" height="25"/>
+        <image name="export" width="25" height="25"/>
         <image name="playIcon" width="25" height="25"/>
         <image name="playerEnd" width="50" height="50"/>
         <image name="settings" width="25" height="25"/>

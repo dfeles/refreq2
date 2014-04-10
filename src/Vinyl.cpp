@@ -48,6 +48,17 @@ void Vinyl::setImage () {
     }
 }
 
+void Vinyl::exportVinyl(string currentLoadedFileName) {
+    
+    ofFileDialogResult result = ofSystemSaveDialog(currentLoadedFileName, "Export image");
+    ofFile exportingFile(result.filePath);
+    string path = result.filePath;
+    if (exportingFile.getExtension()!=".png"){
+        path += ".png";
+    }
+    saveVinylImage(path);
+}
+
 void Vinyl::saveVinylImage(string path) {
     vinylImage.saveImage(path);
 }
@@ -117,6 +128,8 @@ void Vinyl::updateTexture() {
     quad.getTexCoords()[2].set(tx1,ty1);
     quad.getTexCoords()[3].set(tx0,ty1);
 }
+
+
 
 float Vinyl::getVinylHeight(){
     return vinylHeight;

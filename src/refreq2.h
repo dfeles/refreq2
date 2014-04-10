@@ -14,9 +14,10 @@
 
 
 @interface Refreq2 : ofxCocoaGLView {
-    
-    string loadPathNextFrame;
     string mainDataPath;
+    string loadPathNextFrame;
+    vector<string> filesToLoad;
+    string currentLoadedFileName;
     AppDelegate *appDelegate;
     
 }
@@ -42,6 +43,8 @@
 - (void)playPlayer;
 - (void)importFile;
 - (void)setVolume2:(id)sender;
+- (void)setEcho:(id)sender;
+- (void)exportImage;
 
 
 

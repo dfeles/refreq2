@@ -59,11 +59,13 @@ ofxFft* fft;
 
 - (void)loadFileIfNeeded
 {
-    if(loadPathNextFrame != ""){
-        loader->loadFile(loadPathNextFrame);
-        loadPathNextFrame = "";
+    if(filesToLoad.size() > 0){
+        loader->loadFile(filesToLoad[0]);
+        ofFile fileToLoad(filesToLoad[0]);
+        filesToLoad.erase(filesToLoad.begin());
         
-        vinyl->saveVinylImage("../../../a.png");
+        string fileName = fileToLoad.getFileName().substr(0, fileToLoad.getFileName().size()-4);
+        //vinyl->saveVinylImage("../../../newF/" + fileName + ".png"); // this is only for my diploma
     }
 }
 
@@ -75,6 +77,11 @@ ofxFft* fft;
 -(void)setVolume2:(id)sender
 {
     synthetizer->setVolume([sender floatValue]);
+}
+
+-(void)setEcho:(id)sender
+{
+    pixelPickup->echo = [sender floatValue];
 }
 
 -(void)setPickupTop:(NSPoint)point
@@ -102,19 +109,37 @@ ofxFft* fft;
     }
 }
 
+- (void)exportImage
+{
+    vinyl->exportVinyl(currentLoadedFileName);
+}
+
 
 - (void)importFile
 {
-    loadPathNextFrame = gui->getFilePath();
+    string path = gui->getFilePath();
+    ofFile fileToLoad(path);
+    
+    cout << filesToLoad.size() << endl;
+    if(fileToLoad.getExtension() == ""){
+        ofDirectory dir(path);
+        dir.allowExt("mp3");
+        dir.listDir();
+        for(int i = 0; i < dir.numFiles(); i++){
+            filesToLoad.push_back(dir.getPath(i));
+        }
+    }else{
+        filesToLoad.push_back(path);
+    };
 }
 
 - (void)keyPressed:(int)key
 {
-	if(key == 105){
-        loadPathNextFrame = gui->getFilePath();
+    if(key == 105){
+        [self exportImage];
     }
 	if(key == 111){
-        loadPathNextFrame = gui->getFilePath();
+        [self importFile];
     } else if (key == SPACE_KEY){
         [self playPlayer];
     }

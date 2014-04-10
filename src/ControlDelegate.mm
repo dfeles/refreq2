@@ -58,7 +58,15 @@
 }
 
 - (IBAction)changeVolume:(id)sender {
-
+    
     [ofApp setVolume2:sender];
+}
+
+- (IBAction)changeEcho:(id)sender {
+    
+    [ofApp setEcho:sender];
+}
+- (IBAction)exportImage:(id)sender {
+    [ofApp exportImage];
 }
 @end

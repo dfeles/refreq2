@@ -10,10 +10,10 @@
 #define refreq2_refreqConstans_h
 
 #define SAMPLE_RATE 44100
-#define INITIAL_BUFFER_SIZE 512
+#define INITIAL_BUFFER_SIZE 256
 
 #define DEFAULT_MIN_HZ 1
-#define DEFAULT_MAX_HZ 11025//22050
+#define DEFAULT_MAX_HZ 44000
 
 #define HEADER_HEIGHT 0
 #define FOOTER_HEIGHT 0

@@ -15,6 +15,7 @@ void Loader( ){
 
 void Loader::loadFile(string path){
     ofFile fileToLoad(path);
+    cout << fileToLoad.getFileName() << endl;
     string extension = ofToLower(fileToLoad.getExtension());
     if (extension == "mp3" or extension == "wav" or extension == "m4a"){
         player->setStatus(PLAYER_PAUSED);
@@ -44,7 +45,7 @@ void Loader::loadMusic(string path){
     
     int samplesPerFrame = audio.getNumSamples() / frames;
     
-    fft = ofxFft::create(2900, OF_FFT_WINDOW_SINE, OF_FFT_FFTW);
+    fft = ofxFft::create(2500, OF_FFT_WINDOW_SINE, OF_FFT_FFTW);
     
     createdSpectrum.clear();
     createdSpectrum.allocate(frames, PIXELS_READING, OF_IMAGE_COLOR);
@@ -61,13 +62,12 @@ void Loader::loadMusic(string path){
             float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y)/2.0, (float) audio.getSampleRate());
             
             amplitude = log2(amplitude+1);
-//            amplitude *= amplitude;
             amplitude *= 3;
             int bright = MAX(MIN(amplitude * 254.0, 254), 0);
             
          //   bright = 254;
             
-            actualColor.set(bright, bright, bright);
+            //actualColor.set(bright, bright, bright);
             
 //            int i = y * frames * 3 + x * 3;
             int index = (x + y*frames)*3;
@@ -86,7 +86,5 @@ void Loader::loadMusic(string path){
 
 void Loader::loadPicture(ofFile file){
     
-//    ofImage loadedImage;
-//    loadedImage.loadImage(file.getAbsolutePath());
     vinyl->setImageFromPath(file.getAbsolutePath());
 }

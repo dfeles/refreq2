@@ -11,9 +11,14 @@
 	<key>fonts</key>
 	<array>
 		<string>DinHBlackBlack</string>
+		<string>DinHBlackBlack</string>
+		<string>Entypo</string>
+		<string>FontAwesome</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
 	</array>
 	<key>length</key>
-	<integer>27924</integer>
+	<integer>231227</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

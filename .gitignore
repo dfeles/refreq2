@@ -1,4 +1,5 @@
 
+bin/diploma/*
 bin/refreq2.app/*
 bin/refreq2Debug.app/*
 requirements/*
@@ -6,7 +7,3 @@ requirements/*
 bin/data/.gitkeep
 
 refreq2.xcodeproj/project.xcworkspace/xcuserdata/danielfeles.xcuserdatad/UserInterfaceState.xcuserstate
-
-*.xcuserstate
-
-*.xcuserstate

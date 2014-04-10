@@ -13,7 +13,7 @@ PixelPickup::PixelPickup(){
     //remember: x can only be between 0 - vinylWidth
     //remember: y can only be between 0 - PIXELS_READING-1
     
-    setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ, false);
+    setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ, true);
     setTopPickupPoints(200,0);
     setBottomPickupPoints(200,660);
     
@@ -35,7 +35,7 @@ void PixelPickup::getPixels() {
         
         ofPoint pointToGet = *new ofVec2f((int)_x,(int)_y);
         
-        readPixels[i][0] = 1-vinyl->getPixel(pointToGet).getBrightness()/254.0;
+        readPixels[i][0] = (echo * readPixels[i][0] + (1-vinyl->getPixel(pointToGet).getBrightness()/254.0)) / (echo+1);
         readPixels[i][1] = getFreq(pointToGet.y);
         
         //if(i%2 == 0){

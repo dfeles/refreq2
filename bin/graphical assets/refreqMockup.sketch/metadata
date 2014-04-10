@@ -17,11 +17,13 @@
 		<string>Entypo</string>
 		<string>Entypo</string>
 		<string>Entypo</string>
+		<string>FontAwesome</string>
+		<string>Entypo</string>
 		<string>Entypo</string>
 		<string>Entypo</string>
 	</array>
 	<key>length</key>
-	<integer>153516</integer>
+	<integer>162300</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

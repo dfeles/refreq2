@@ -13,6 +13,7 @@
     NSTextField *MaxHz;
     NSSlider *timeSlider;
     NSSlider *changeVolume;
+    NSSlider *changeEcho;
     
     
 }
@@ -30,6 +31,7 @@
 
 @property (assign) IBOutlet NSSlider *timeSlider;
 @property (assign) IBOutlet NSSlider *changeVolume;
+@property (assign) IBOutlet NSSlider *changeEcho;
 
 -(IBAction)changeColor:(id)sender;
 -(void)setUpPlayButton:(BOOL)playing;

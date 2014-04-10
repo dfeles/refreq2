@@ -17,6 +17,7 @@ class Vinyl {
         Vinyl();
         void setImageFromPath(string path);
         void setImageFromSpectrum(ofImage image);
+        void exportVinyl(string currentLoadedFileName);
         void saveVinylImage(string path);
     
     

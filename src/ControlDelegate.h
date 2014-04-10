@@ -28,6 +28,8 @@
 - (IBAction) pixelPickupTopAction: (id) sender;
 - (IBAction)importFile:(id)sender;
 - (IBAction)changeVolume:(id)sender;
+- (IBAction)setVolume:(id)sender;
+- (IBAction)exportImage:(id)sender;
 
 @property (assign) IBOutlet NSLayoutConstraint *TopPickerY;
 @property (assign) IBOutlet NSLayoutConstraint *TopPickerX;
