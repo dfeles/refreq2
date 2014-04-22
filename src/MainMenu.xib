@@ -421,11 +421,11 @@
                                             </tabViewItem>
                                             <tabViewItem label="Sound" identifier="2" id="OTK-Uf-FRr">
                                                 <view key="view" id="emO-8V-PBN">
-                                                    <rect key="frame" x="10" y="33" width="197" height="670"/>
+                                                    <rect key="frame" x="10" y="33" width="202" height="756"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-Ln-KNo">
-                                                            <rect key="frame" x="5" y="634" width="25" height="25"/>
+                                                            <rect key="frame" x="5" y="720" width="25" height="25"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="ilv-gB-dow">
                                                                 <font key="font" size="20" name="FontAwesome"/>
@@ -434,7 +434,7 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A0A-FU-twH">
-                                                            <rect key="frame" x="36" y="638" width="155" height="15"/>
+                                                            <rect key="frame" x="36" y="724" width="155" height="15"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <sliderCell key="cell" controlSize="mini" state="on" alignment="left" maxValue="10" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="Ulh-Rx-e1b"/>
                                                             <connections>
@@ -442,7 +442,7 @@
                                                             </connections>
                                                         </slider>
                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCD-J8-dvk">
-                                                            <rect key="frame" x="9" y="579" width="34" height="17"/>
+                                                            <rect key="frame" x="9" y="665" width="34" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Echo" id="a6r-7h-w4j">
                                                                 <font key="font" metaFont="system"/>
@@ -451,7 +451,7 @@
                                                             </textFieldCell>
                                                         </textField>
                                                         <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xsy-9p-joU">
-                                                            <rect key="frame" x="11" y="554" width="180" height="15"/>
+                                                            <rect key="frame" x="11" y="640" width="180" height="15"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <sliderCell key="cell" controlSize="mini" state="on" alignment="left" maxValue="30" tickMarkPosition="above" sliderType="linear" id="749-iV-3aH"/>
                                                             <connections>

@@ -10,15 +10,13 @@
 	<string>4570185e2c9ded14ebc287c802202c126573b527</string>
 	<key>fonts</key>
 	<array>
-		<string>DinHBlackBlack</string>
-		<string>DinHBlackBlack</string>
 		<string>Entypo</string>
 		<string>FontAwesome</string>
 		<string>Entypo</string>
 		<string>Entypo</string>
 	</array>
 	<key>length</key>
-	<integer>231227</integer>
+	<integer>230627</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

@@ -5,11 +5,19 @@
 	<key>app</key>
 	<string>com.bohemiancoding.sketch</string>
 	<key>build</key>
-	<integer>5361</integer>
+	<integer>5370</integer>
 	<key>commit</key>
-	<string>4570185e2c9ded14ebc287c802202c126573b527</string>
+	<string>38aeabf36c76d40a8ed2d256f8f3b9492c3dac07</string>
 	<key>fonts</key>
 	<array>
+		<string>FontAwesome</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
+		<string>FontAwesome</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
+		<string>Entypo</string>
 		<string>LucidaGrande</string>
 		<string>LucidaGrande</string>
 		<string>LucidaGrande</string>
@@ -21,9 +29,15 @@
 		<string>Entypo</string>
 		<string>Entypo</string>
 		<string>Entypo</string>
+		<string>LucidaGrande</string>
+		<string>LucidaGrande</string>
+		<string>LucidaGrande</string>
+		<string>LucidaGrande</string>
+		<string>LucidaGrande</string>
+		<string>LucidaGrande</string>
 	</array>
 	<key>length</key>
-	<integer>162300</integer>
+	<integer>963140</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

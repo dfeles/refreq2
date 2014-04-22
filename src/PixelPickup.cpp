@@ -13,9 +13,14 @@ PixelPickup::PixelPickup(){
     //remember: x can only be between 0 - vinylWidth
     //remember: y can only be between 0 - PIXELS_READING-1
     
-    setupHertz(DEFAULT_MIN_HZ, DEFAULT_MAX_HZ, true);
-    setTopPickupPoints(200,0);
-    setBottomPickupPoints(200,660);
+    setMinimumHertz(DEFAULT_MIN_HZ);
+    setMaximumHertz(DEFAULT_MAX_HZ);
+//    setupNormalScale();
+    setupLogScale();
+//    setupMidiScale();
+    
+    setTopPickupPoints(70,0);
+    setBottomPickupPoints(70,660);
     
     for(int i=0; i<PIXELS_READING; i++){
          readPixels[i][0] = 0;
@@ -91,6 +96,45 @@ void PixelPickup::setupHertz (float min, float max, bool logarithmic) {
         }
     }
 }
+
+void PixelPickup::setMinimumHertz(float hertz){
+    minimumHz = hertz;
+};
+void PixelPickup::setMaximumHertz(float hertz){
+    maximumHz = hertz;
+};
+void PixelPickup::setupNormalScale(){
+    for(int n = 1;n<PIXELS_READING+1;n++){
+        hertzScale[n] = (maximumHz-minimumHz) / PIXELS_READING * n;
+    }
+};
+void PixelPickup::setupLogScale(){
+    for(int n = PIXELS_READING;n>0; n--){
+        hertzScale[(int)PIXELS_READING+1-n] = (log(n) - log(1)) / ((log(PIXELS_READING)) - log(1)) * (minimumHz - maximumHz) + maximumHz;
+    }
+};
+void PixelPickup::setupMidiScale(){
+    setMaximumHertz(12544);
+    setupNormalScale();
+    int i = 0;
+    for(int n = 1;n<PIXELS_READING+1;n++){
+        if(midiNotes[i]>=hertzScale[n]){
+            hertzScale[n] = midiNotes[i];
+        }else{
+            if(i > 128){
+                hertzScale[n] = 1;
+            }else{
+                hertzScale[n] = midiNotes[i+1];
+                i++;
+            }
+        }
+    }
+    
+    for(int n = 0;n<PIXELS_READING;n++){
+        hertzScale[n] = midiNotes[n];
+        cout << hertzScale[n];
+    }
+};
 
 int PixelPickup::getFreq(int y) {
     return hertzScale[(int)PIXELS_READING-y];

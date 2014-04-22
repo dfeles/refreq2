@@ -28,11 +28,6 @@ void Loader::loadFile(string path){
 }
 
 void Loader::loadMusic(string path){
-//    musicLoader->loadMusic(path);
-    cout << path;
-    
-    
-    
     audio.load(path);
     
     const vector<float>& rawSamples = audio.getRawSamples();
@@ -59,10 +54,10 @@ void Loader::loadMusic(string path){
         
         ofColor actualColor;
         for(int y=0; y<PIXELS_READING; y++){
-            float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y)/2.0, (float) audio.getSampleRate());
+            float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y), (float) audio.getSampleRate());
             
             amplitude = log2(amplitude+1);
-            amplitude *= 3;
+            amplitude *= 5;
             int bright = MAX(MIN(amplitude * 254.0, 254), 0);
             
          //   bright = 254;
