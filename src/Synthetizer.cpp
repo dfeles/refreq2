@@ -16,11 +16,10 @@ Synthetizer::Synthetizer () {
 }
 
 void Synthetizer::calculateWave (float * output) {
-    
     for (int i = 0; i < INITIAL_BUFFER_SIZE; i++){
         
         wave = 0.0;
-        for(int n = 0; n < PIXELS_READING; n += 3){
+        for(int n = 0; n < PIXELS_READING; n += 2){
             
             
             if (pixelPickup->readPixels[n][0]>0.0001) {

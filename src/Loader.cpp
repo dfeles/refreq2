@@ -54,7 +54,7 @@ void Loader::loadMusic(string path){
         
         ofColor actualColor;
         for(int y=0; y<PIXELS_READING; y++){
-            float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y), (float) audio.getSampleRate());
+            float amplitude = fft->getAmplitudeAtFrequency(pixelPickup->getFreq(y)/2, (float) audio.getSampleRate());
             
             amplitude = log2(amplitude+1);
             amplitude *= 5;

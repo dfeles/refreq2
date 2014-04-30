@@ -104,16 +104,19 @@ void PixelPickup::setMaximumHertz(float hertz){
     maximumHz = hertz;
 };
 void PixelPickup::setupNormalScale(){
+    setScaleState(SCALE_NORMAL_STATE);
     for(int n = 1;n<PIXELS_READING+1;n++){
         hertzScale[n] = (maximumHz-minimumHz) / PIXELS_READING * n;
     }
 };
 void PixelPickup::setupLogScale(){
+    setScaleState(SCALE_LOG_STATE);
     for(int n = PIXELS_READING;n>0; n--){
         hertzScale[(int)PIXELS_READING+1-n] = (log(n) - log(1)) / ((log(PIXELS_READING)) - log(1)) * (minimumHz - maximumHz) + maximumHz;
     }
 };
 void PixelPickup::setupMidiScale(){
+    setScaleState(SCALE_MIDI_STATE);
     setMaximumHertz(12544);
     setupNormalScale();
     int i = 0;
@@ -135,6 +138,14 @@ void PixelPickup::setupMidiScale(){
         cout << hertzScale[n];
     }
 };
+
+void PixelPickup::setScaleState(int state){
+    scaleState = state;
+}
+
+int PixelPickup::getScaleState(){
+    return scaleState;
+}
 
 int PixelPickup::getFreq(int y) {
     return hertzScale[(int)PIXELS_READING-y];

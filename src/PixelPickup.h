@@ -30,9 +30,12 @@ class PixelPickup {
     
         void setMinimumHertz(float hertz);
         void setMaximumHertz(float hertz);
+    
         void setupNormalScale();
         void setupLogScale();
         void setupMidiScale();
+        void setScaleState(int state);
+        int getScaleState();
     
         int getHertzMin ();
         int getHertzMax ();
@@ -41,6 +44,7 @@ class PixelPickup {
 private:
     float minimumHz = DEFAULT_MIN_HZ;
     float maximumHz = DEFAULT_MAX_HZ;
+    int scaleState;
     
     float limitY (float y);
     float limitX (float x);

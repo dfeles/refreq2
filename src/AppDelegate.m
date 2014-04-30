@@ -79,7 +79,8 @@
 	//
 	CGContextRef context = [[NSGraphicsContext currentContext]graphicsPort];
 	CGContextSetBlendMode(context, kCGBlendModeNormal);
-	[[NSColor colorWithCalibratedRed:0.18 green:0.18 blue:0.18 alpha:1] set];
+//	[[NSColor colorWithCalibratedRed:0.18 green:0.18 blue:0.18 alpha:1] set];
+	[[NSColor colorWithCalibratedRed:1 green:1 blue:1 alpha:1] set];
 	[[NSBezierPath bezierPathWithRect:rect] fill];
 }
 

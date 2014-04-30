@@ -3,42 +3,20 @@
 <plist version="1.0">
 <dict>
 	<key>app</key>
-	<string>com.bohemiancoding.sketch</string>
+	<string>com.bohemiancoding.sketch3</string>
 	<key>build</key>
-	<integer>5370</integer>
+	<integer>7597</integer>
 	<key>commit</key>
-	<string>38aeabf36c76d40a8ed2d256f8f3b9492c3dac07</string>
+	<string>463d76bf23dc890960e184011f80b3dacac572b9</string>
 	<key>fonts</key>
 	<array>
 		<string>FontAwesome</string>
 		<string>Entypo</string>
-		<string>Entypo</string>
-		<string>Entypo</string>
-		<string>FontAwesome</string>
-		<string>Entypo</string>
-		<string>Entypo</string>
-		<string>Entypo</string>
-		<string>LucidaGrande</string>
-		<string>LucidaGrande</string>
-		<string>LucidaGrande</string>
-		<string>FontAwesome</string>
-		<string>Entypo</string>
-		<string>Entypo</string>
-		<string>Entypo</string>
-		<string>FontAwesome</string>
-		<string>Entypo</string>
-		<string>Entypo</string>
-		<string>Entypo</string>
-		<string>LucidaGrande</string>
-		<string>LucidaGrande</string>
-		<string>LucidaGrande</string>
-		<string>LucidaGrande</string>
-		<string>LucidaGrande</string>
 		<string>LucidaGrande</string>
 	</array>
 	<key>length</key>
-	<integer>963140</integer>
+	<integer>940474</integer>
 	<key>version</key>
-	<integer>18</integer>
+	<integer>36</integer>
 </dict>
 </plist>

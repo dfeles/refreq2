@@ -13,7 +13,7 @@ void Gui(){
 }
 
 void Gui::drawGui( ){
-    
+    /*
     ofSetColor(255,255,255);
     //ofRect(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
     ofSetColor(233,233,233);
@@ -25,7 +25,7 @@ void Gui::drawGui( ){
     
     for(int i=0; i<INITIAL_BUFFER_SIZE; i++){
         ofCircle(i, synthetizer->soundWave[i]*100+150, 1);
-    }
+    }*/
 
 }
 
